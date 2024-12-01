@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['info_0',['INFO',['../util_8h.html#a923ea67c80a93bac1726e7dcc3824096',1,'util.h']]]
+  ['error_0',['ERROR',['../util_8h.html#a5dd66fe6bc5d9d8521929591f7d6290f',1,'util.h']]]
 ];

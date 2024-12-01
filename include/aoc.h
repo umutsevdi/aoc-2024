@@ -18,24 +18,13 @@ typedef struct aoc_solution_t {
     /* Description of the problem */
     const char* description;
     /* Function to execute, NULL if the question is not finished yet */
-    void (*run)(char* input);
+    enum aoc_code_t (*run)(char* input);
 } Solution;
 
 #define SOLUTION_SIZE 25
 /* Shared solution array */
 extern Solution* solutions[SOLUTION_SIZE];
 
-enum aoc_code_t {
-    AOC_OK,
-    ADC_UNKNOW_OPTION,
-    AOC_SOLUTION_ID_PARSE,
-    AOC_NO_SUCH_QUESTION,
-    AOC_OUT_OF_BOUNDS,
-    AOC_SOLUTION_NOT_COMPLETE,
-    AOC_PIPE_FAILED,
-
-    AOC_ERR_END
-};
 #define SOLUTION(DAY, ...)                                                     \
     Solution DAY_##DAY##_impl = (Solution)__VA_ARGS__;                         \
     struct aoc_solution_t* AOC_DAY_##DAY = &DAY_##DAY##_impl

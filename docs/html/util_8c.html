@@ -110,8 +110,6 @@ $(function(){initNavTree('util_8c.html',''); initResizable(true); });
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a60de64d75454385b23995437f1d72669" id="r_a60de64d75454385b23995437f1d72669"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60de64d75454385b23995437f1d72669">start</a> ()</td></tr>
-<tr class="separator:a60de64d75454385b23995437f1d72669"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e01b48ac10830f8b9a9f7f3c92b4e00" id="r_a1e01b48ac10830f8b9a9f7f3c92b4e00"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e01b48ac10830f8b9a9f7f3c92b4e00">__now</a> ()</td></tr>
 <tr class="separator:a1e01b48ac10830f8b9a9f7f3c92b4e00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaeff92923022b210edb2371f4a370310" id="r_aaeff92923022b210edb2371f4a370310"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaeff92923022b210edb2371f4a370310">cmparg</a> (const char *l_opt, const char *s_opt, const char *arg)</td></tr>
@@ -120,11 +118,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a9459ac4ebc942fc74e4bda752d2b7f5d" id="r_a9459ac4ebc942fc74e4bda752d2b7f5d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9459ac4ebc942fc74e4bda752d2b7f5d">cmparg_s</a> (const char *opt, const char *arg)</td></tr>
 <tr class="memdesc:a9459ac4ebc942fc74e4bda752d2b7f5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares the given argument with a single NULL terminated string.  <br /></td></tr>
 <tr class="separator:a9459ac4ebc942fc74e4bda752d2b7f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0db4e57880c2b2ddcd90fd0706b4b81a" id="r_a0db4e57880c2b2ddcd90fd0706b4b81a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0db4e57880c2b2ddcd90fd0706b4b81a">read_input</a> (char *arg, <a class="el" href="structPipeInfo.html">PipeInfo</a> *pipe)</td></tr>
+<tr class="memdesc:a0db4e57880c2b2ddcd90fd0706b4b81a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the arg.  <br /></td></tr>
+<tr class="separator:a0db4e57880c2b2ddcd90fd0706b4b81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ac82dd9b92b3bb8f31d2f085f672a7dc7" id="r_ac82dd9b92b3bb8f31d2f085f672a7dc7"><td class="memItemLeft" align="right" valign="top">static time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac82dd9b92b3bb8f31d2f085f672a7dc7">_now</a></td></tr>
-<tr class="separator:ac82dd9b92b3bb8f31d2f085f672a7dc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaff9c603493b43dfb54cb7b3c1fed689" id="r_aaff9c603493b43dfb54cb7b3c1fed689"><td class="memItemLeft" align="right" valign="top">static struct tm *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaff9c603493b43dfb54cb7b3c1fed689">_tm</a></td></tr>
 <tr class="separator:aaff9c603493b43dfb54cb7b3c1fed689"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -214,46 +213,43 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a60de64d75454385b23995437f1d72669" name="a60de64d75454385b23995437f1d72669"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60de64d75454385b23995437f1d72669">&#9670;&#160;</a></span>start()</h2>
+<a id="a0db4e57880c2b2ddcd90fd0706b4b81a" name="a0db4e57880c2b2ddcd90fd0706b4b81a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0db4e57880c2b2ddcd90fd0706b4b81a">&#9670;&#160;</a></span>read_input()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void start </td>
+          <td class="memname">int read_input </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>arg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="structPipeInfo.html">PipeInfo</a> *</td>          <td class="paramname"><span class="paramname"><em>pipe</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Reads the arg. </p>
+<p>If there is no argument, fills the pipe. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>- arg to select. </td></tr>
+    <tr><td class="paramname">pipe</td><td>- empty pipe object to fill in case of an empty arg.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Selected buffer.<ul>
+<li>0 : arg</li>
+<li>1 : pipe</li>
+<li>AOC_PIPE_FAILED : on allocation errors </li>
+</ul>
+</dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="ac82dd9b92b3bb8f31d2f085f672a7dc7" name="ac82dd9b92b3bb8f31d2f085f672a7dc7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac82dd9b92b3bb8f31d2f085f672a7dc7">&#9670;&#160;</a></span>_now</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">time_t _now</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="aaff9c603493b43dfb54cb7b3c1fed689" name="aaff9c603493b43dfb54cb7b3c1fed689"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaff9c603493b43dfb54cb7b3c1fed689">&#9670;&#160;</a></span>_tm</h2>
 

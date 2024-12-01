@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['run_0',['run',['../structaoc__solution__t.html#a8486e4eb028c5fd686f00e4936df3bf6',1,'aoc_solution_t']]]
+  ['main_0',['main',['../main_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.c']]],
+  ['main_2ec_1',['main.c',['../main_8c.html',1,'']]]
 ];
