@@ -159,6 +159,7 @@ Macros</h2></td></tr>
 <tr class="memitem:a46bbe7970a7bb4501bf57781e60190ee" id="r_a46bbe7970a7bb4501bf57781e60190ee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46bbe7970a7bb4501bf57781e60190ee">SOLUTION_SIZE</a>&#160;&#160;&#160;25</td></tr>
 <tr class="separator:a46bbe7970a7bb4501bf57781e60190ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0810caac8fa059073f8f6cc7cd6b83b1" id="r_a0810caac8fa059073f8f6cc7cd6b83b1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0810caac8fa059073f8f6cc7cd6b83b1">SOLUTION</a>(DAY, ...)</td></tr>
+<tr class="memdesc:a0810caac8fa059073f8f6cc7cd6b83b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a solution for given day.  <br /></td></tr>
 <tr class="separator:a0810caac8fa059073f8f6cc7cd6b83b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
@@ -170,11 +171,13 @@ Typedefs</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a8cf6393d12a3398e7a079faec723a592" id="r_a8cf6393d12a3398e7a079faec723a592"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8cf6393d12a3398e7a079faec723a592">setup_solution_list</a> ()</td></tr>
+<tr class="memdesc:a8cf6393d12a3398e7a079faec723a592"><td class="mdescLeft">&#160;</td><td class="mdescRight">Links the remaining solutions.  <br /></td></tr>
 <tr class="separator:a8cf6393d12a3398e7a079faec723a592"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a5a4f78df6fb8aa4b67cc2705b7502d6d" id="r_a5a4f78df6fb8aa4b67cc2705b7502d6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ac63e297c58a5acc1bfe6731dd02f2ede">Solution</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a4f78df6fb8aa4b67cc2705b7502d6d">solutions</a> [<a class="el" href="#a46bbe7970a7bb4501bf57781e60190ee">SOLUTION_SIZE</a>]</td></tr>
+<tr class="memdesc:a5a4f78df6fb8aa4b67cc2705b7502d6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared solution array.  <br /></td></tr>
 <tr class="separator:a5a4f78df6fb8aa4b67cc2705b7502d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -199,8 +202,10 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_struct" href="structaoc__solution__t.html">Solution</a> DAY_##DAY##_impl = (<a class="code hl_typedef" href="#ac63e297c58a5acc1bfe6731dd02f2ede">Solution</a>)__VA_ARGS__;                         \</div>
 <div class="line">    <span class="keyword">struct </span><a class="code hl_struct" href="structaoc__solution__t.html">aoc_solution_t</a>* AOC_DAY_##DAY = &amp;DAY_##DAY##_impl</div>
 <div class="ttc" id="aaoc_8h_html_ac63e297c58a5acc1bfe6731dd02f2ede"><div class="ttname"><a href="#ac63e297c58a5acc1bfe6731dd02f2ede">Solution</a></div><div class="ttdeci">struct aoc_solution_t Solution</div><div class="ttdoc">File: include/aoc.h Created: 12/01/24 Author: Umut Sevdi Description: Advent of Code 2024 Solutions.</div></div>
-<div class="ttc" id="astructaoc__solution__t_html"><div class="ttname"><a href="structaoc__solution__t.html">aoc_solution_t</a></div><div class="ttdoc">File: include/aoc.h Created: 12/01/24 Author: Umut Sevdi Description: Advent of Code 2024 Solutions.</div><div class="ttdef"><b>Definition</b> aoc.h:16</div></div>
+<div class="ttc" id="astructaoc__solution__t_html"><div class="ttname"><a href="structaoc__solution__t.html">aoc_solution_t</a></div><div class="ttdoc">File: include/aoc.h Created: 12/01/24 Author: Umut Sevdi Description: Advent of Code 2024 Solutions.</div><div class="ttdef"><b>Definition</b> aoc.h:14</div></div>
 </div><!-- fragment -->
+<p>Define a solution for given day. </p>
+
 </div>
 </div>
 <a id="a46bbe7970a7bb4501bf57781e60190ee" name="a46bbe7970a7bb4501bf57781e60190ee"></a>
@@ -259,6 +264,8 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Links the remaining solutions. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -281,6 +288,8 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Shared solution array. </p>
 
 </div>
 </div>

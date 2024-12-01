@@ -8,16 +8,30 @@ PROJECT_BRIEF          = "A repository that contains Advent of Code 2024 "\
 OUTPUT_DIRECTORY       = docs/
 
 # Input directories
-INPUT                  = src/ include/
+INPUT                  = src/ include/ ./README.md
 BRIEF_MEMBER_DESC      = YES
 REPEAT_BRIEF           = YES
 JAVADOC_AUTOBRIEF      = YES
+CPP_AUTOBRIEF          = YES
 JAVADOC_BANNER         = YES
 BUILTIN_STL_SUPPORT    = NO
 EXTRACT_STATIC         = YES
 EXTRACT_LOCAL_METHODS  = YES
 # Patterns to ignore
-EXCLUDE_PATTERNS      = *.md
+EXCLUDE_PATTERNS      = 
+
+ABBREVIATE_BRIEF       = "The $name class" \
+                         "The $name struct" \
+                         "The $name widget" \
+                         "The $name file" \
+                         is \
+                         provides \
+                         specifies \
+                         contains \
+                         represents \
+                         a \
+                         an \
+                         the
 
 # Recursively search for files in the input directory
 RECURSIVE              = YES
@@ -63,3 +77,7 @@ FULL_SIDEBAR           = NO
 DISABLE_INDEX          = NO
 HTML_EXTRA_STYLESHEET  = external/doxygen-awesome-css/doxygen-awesome.css \
                          .style.css
+WARN_IF_UNDOCUMENTED   = YES
+WARN_IF_DOC_ERROR      = YES
+WARN_NO_PARAMDOC       = YES
+WARN_AS_ERROR          = YES

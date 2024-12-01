@@ -193,8 +193,10 @@ Enumerations</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a1e01b48ac10830f8b9a9f7f3c92b4e00" id="r_a1e01b48ac10830f8b9a9f7f3c92b4e00"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e01b48ac10830f8b9a9f7f3c92b4e00">__now</a> ()</td></tr>
+<tr class="memdesc:a1e01b48ac10830f8b9a9f7f3c92b4e00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current date time in string.  <br /></td></tr>
 <tr class="separator:a1e01b48ac10830f8b9a9f7f3c92b4e00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ec50cbe0735fc65f2eff87afe8582a6" id="r_a9ec50cbe0735fc65f2eff87afe8582a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ec50cbe0735fc65f2eff87afe8582a6">swapl</a> (long *a, long *b)</td></tr>
+<tr class="memdesc:a9ec50cbe0735fc65f2eff87afe8582a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swap values of two long.  <br /></td></tr>
 <tr class="separator:a9ec50cbe0735fc65f2eff87afe8582a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14bd4f5ee95b2004b49a706d6db4cea2" id="r_a14bd4f5ee95b2004b49a706d6db4cea2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14bd4f5ee95b2004b49a706d6db4cea2">sortl</a> (long *arr, int n)</td></tr>
 <tr class="memdesc:a14bd4f5ee95b2004b49a706d6db4cea2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort an array with n items from smallest to biggest.  <br /></td></tr>
@@ -218,7 +220,7 @@ Functions</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">    (fprintf(stderr, <span class="stringliteral">&quot;ERROR | %17s %s#%s():%-4d - &quot;</span> #CODE <span class="stringliteral">&quot;\r\n&quot;</span>, <a class="code hl_function" href="#a1e01b48ac10830f8b9a9f7f3c92b4e00">__now</a>(),     \</div>
 <div class="line">             __FILE__, __PRETTY_FUNCTION__, __LINE__),                         \</div>
 <div class="line">     CODE)</div>
-<div class="ttc" id="autil_8h_html_a1e01b48ac10830f8b9a9f7f3c92b4e00"><div class="ttname"><a href="#a1e01b48ac10830f8b9a9f7f3c92b4e00">__now</a></div><div class="ttdeci">const char * __now()</div><div class="ttdef"><b>Definition</b> util.c:6</div></div>
+<div class="ttc" id="autil_8h_html_a1e01b48ac10830f8b9a9f7f3c92b4e00"><div class="ttname"><a href="#a1e01b48ac10830f8b9a9f7f3c92b4e00">__now</a></div><div class="ttdeci">const char * __now()</div><div class="ttdoc">Current date time in string.</div><div class="ttdef"><b>Definition</b> util.c:6</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -278,20 +280,32 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>File: <a class="el" href="util_8h.html">include/util.h</a> Created: 12/01/24 Author: Umut Sevdi Description: Utility library. </p>
-<p>Project: umutsevdi/aoc-2024 License: MIT License </p>
+<p>Project: umutsevdi/aoc-2024 License: MIT License Error codes of the program </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a08c0593463b66eec10c4268b2fe5b5db" name="a88b53f82662054ffc8f123a7ffee7ed5a08c0593463b66eec10c4268b2fe5b5db"></a>AOC_OK&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a16f155c72f099092ecb9b2e26fecbc0b" name="a88b53f82662054ffc8f123a7ffee7ed5a16f155c72f099092ecb9b2e26fecbc0b"></a>ADC_UNKNOWN_OPTION&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5aae78ffd50a3120deb4093ff03d6f956a" name="a88b53f82662054ffc8f123a7ffee7ed5aae78ffd50a3120deb4093ff03d6f956a"></a>AOC_NO_QUESTION_PROVIDED&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a4737baa9a9d3a86fca833afcaf154815" name="a88b53f82662054ffc8f123a7ffee7ed5a4737baa9a9d3a86fca833afcaf154815"></a>AOC_SOLUTION_ID_PARSE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a5e34561075ef24ae852b04ecce049e4b" name="a88b53f82662054ffc8f123a7ffee7ed5a5e34561075ef24ae852b04ecce049e4b"></a>AOC_NO_SUCH_QUESTION&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5aadd0d751b8c512ec82014a34a530b955" name="a88b53f82662054ffc8f123a7ffee7ed5aadd0d751b8c512ec82014a34a530b955"></a>AOC_OUT_OF_BOUNDS&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5adf4b56de54d52f5a0e64f5a61b46aee1" name="a88b53f82662054ffc8f123a7ffee7ed5adf4b56de54d52f5a0e64f5a61b46aee1"></a>AOC_SOLUTION_NOT_COMPLETE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a48c881a7283ed744b1df107b35d1f378" name="a88b53f82662054ffc8f123a7ffee7ed5a48c881a7283ed744b1df107b35d1f378"></a>AOC_FILE_NOT_FOUND&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5ad46a41c338aef0e3c3c028627954be03" name="a88b53f82662054ffc8f123a7ffee7ed5ad46a41c338aef0e3c3c028627954be03"></a>AOC_NOT_A_FILE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a561c10c0cfbb9de31b32aaef73f47cb8" name="a88b53f82662054ffc8f123a7ffee7ed5a561c10c0cfbb9de31b32aaef73f47cb8"></a>AOC_PIPE_FAILED&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a252eefa0c7a351909f15749509c199f7" name="a88b53f82662054ffc8f123a7ffee7ed5a252eefa0c7a351909f15749509c199f7"></a>AOC_NO_INPUT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a24fdaccbcd2f7086ab1dfc3b742c0cdc" name="a88b53f82662054ffc8f123a7ffee7ed5a24fdaccbcd2f7086ab1dfc3b742c0cdc"></a>AOC_ERR_END&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a16f155c72f099092ecb9b2e26fecbc0b" name="a88b53f82662054ffc8f123a7ffee7ed5a16f155c72f099092ecb9b2e26fecbc0b"></a>ADC_UNKNOWN_OPTION&#160;</td><td class="fielddoc"><p>Process completed successfully. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5aae78ffd50a3120deb4093ff03d6f956a" name="a88b53f82662054ffc8f123a7ffee7ed5aae78ffd50a3120deb4093ff03d6f956a"></a>AOC_NO_QUESTION_PROVIDED&#160;</td><td class="fielddoc"><p>Given CLI option is invalid. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a4737baa9a9d3a86fca833afcaf154815" name="a88b53f82662054ffc8f123a7ffee7ed5a4737baa9a9d3a86fca833afcaf154815"></a>AOC_SOLUTION_ID_PARSE&#160;</td><td class="fielddoc"><p>No question provided to query. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a5e34561075ef24ae852b04ecce049e4b" name="a88b53f82662054ffc8f123a7ffee7ed5a5e34561075ef24ae852b04ecce049e4b"></a>AOC_NO_SUCH_QUESTION&#160;</td><td class="fielddoc"><p>Invalid question number. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5aadd0d751b8c512ec82014a34a530b955" name="a88b53f82662054ffc8f123a7ffee7ed5aadd0d751b8c512ec82014a34a530b955"></a>AOC_OUT_OF_BOUNDS&#160;</td><td class="fielddoc"><p>No such question. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5adf4b56de54d52f5a0e64f5a61b46aee1" name="a88b53f82662054ffc8f123a7ffee7ed5adf4b56de54d52f5a0e64f5a61b46aee1"></a>AOC_SOLUTION_NOT_COMPLETE&#160;</td><td class="fielddoc"><p>Provided id is out of bounds. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a48c881a7283ed744b1df107b35d1f378" name="a88b53f82662054ffc8f123a7ffee7ed5a48c881a7283ed744b1df107b35d1f378"></a>AOC_FILE_NOT_FOUND&#160;</td><td class="fielddoc"><p>Solution is not yet completed for the question. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5ad46a41c338aef0e3c3c028627954be03" name="a88b53f82662054ffc8f123a7ffee7ed5ad46a41c338aef0e3c3c028627954be03"></a>AOC_NOT_A_FILE&#160;</td><td class="fielddoc"><p>No such file or directory. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a561c10c0cfbb9de31b32aaef73f47cb8" name="a88b53f82662054ffc8f123a7ffee7ed5a561c10c0cfbb9de31b32aaef73f47cb8"></a>AOC_PIPE_FAILED&#160;</td><td class="fielddoc"><p>Expected a file, found a directory. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a252eefa0c7a351909f15749509c199f7" name="a88b53f82662054ffc8f123a7ffee7ed5a252eefa0c7a351909f15749509c199f7"></a>AOC_NO_INPUT&#160;</td><td class="fielddoc"><p>Error during allocation. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a24fdaccbcd2f7086ab1dfc3b742c0cdc" name="a88b53f82662054ffc8f123a7ffee7ed5a24fdaccbcd2f7086ab1dfc3b742c0cdc"></a>AOC_ERR_END&#160;</td><td class="fielddoc"><p>No input provided. </p>
+<p>Error size, invalid error type </p>
+</td></tr>
 </table>
 
 </div>
@@ -311,6 +325,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Current date time in string. </p>
 
 </div>
 </div>
@@ -355,7 +371,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="util_8h_a14bd4f5ee95b2004b49a706d6db4cea2_cgraph.png" border="0" usemap="#autil_8h_a14bd4f5ee95b2004b49a706d6db4cea2_cgraph" alt=""/></div>
 <map name="autil_8h_a14bd4f5ee95b2004b49a706d6db4cea2_cgraph" id="autil_8h_a14bd4f5ee95b2004b49a706d6db4cea2_cgraph">
 <area shape="rect" title="Sort an array with n items from smallest to biggest." alt="" coords="5,5,56,33"/>
-<area shape="rect" href="util_8c.html#a9ec50cbe0735fc65f2eff87afe8582a6" title=" " alt="" coords="104,5,163,33"/>
+<area shape="rect" href="util_8c.html#a9ec50cbe0735fc65f2eff87afe8582a6" title="Swap values of two long." alt="" coords="104,5,163,33"/>
 <area shape="poly" title=" " alt="" coords="56,16,88,16,88,22,56,22"/>
 </map>
 </div>
@@ -388,6 +404,8 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Swap values of two long. </p>
 
 </div>
 </div>
