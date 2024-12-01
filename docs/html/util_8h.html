@@ -100,7 +100,6 @@ $(function(){initNavTree('util_8h.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
@@ -115,11 +114,6 @@ $(function(){initNavTree('util_8h.html',''); initResizable(true); });
 </div>
 <p><a href="util_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPipeInfo.html">PipeInfo</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a91a8f5dd90b4e2ab426f8509d40c3ee0" id="r_a91a8f5dd90b4e2ab426f8509d40c3ee0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91a8f5dd90b4e2ab426f8509d40c3ee0">INFO</a>(CODE, ...)</td></tr>
@@ -134,15 +128,18 @@ Enumerations</h2></td></tr>
 <tr class="memitem:a88b53f82662054ffc8f123a7ffee7ed5" id="r_a88b53f82662054ffc8f123a7ffee7ed5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88b53f82662054ffc8f123a7ffee7ed5">aoc_code_t</a> { <br />
 &#160;&#160;<a class="el" href="#a88b53f82662054ffc8f123a7ffee7ed5a08c0593463b66eec10c4268b2fe5b5db">AOC_OK</a>
 , <a class="el" href="#a88b53f82662054ffc8f123a7ffee7ed5a16f155c72f099092ecb9b2e26fecbc0b">ADC_UNKNOWN_OPTION</a>
+, <a class="el" href="#a88b53f82662054ffc8f123a7ffee7ed5aae78ffd50a3120deb4093ff03d6f956a">AOC_NO_QUESTION_PROVIDED</a>
 , <a class="el" href="#a88b53f82662054ffc8f123a7ffee7ed5a4737baa9a9d3a86fca833afcaf154815">AOC_SOLUTION_ID_PARSE</a>
-, <a class="el" href="#a88b53f82662054ffc8f123a7ffee7ed5a5e34561075ef24ae852b04ecce049e4b">AOC_NO_SUCH_QUESTION</a>
 , <br />
-&#160;&#160;<a class="el" href="#a88b53f82662054ffc8f123a7ffee7ed5aadd0d751b8c512ec82014a34a530b955">AOC_OUT_OF_BOUNDS</a>
+&#160;&#160;<a class="el" href="#a88b53f82662054ffc8f123a7ffee7ed5a5e34561075ef24ae852b04ecce049e4b">AOC_NO_SUCH_QUESTION</a>
+, <a class="el" href="#a88b53f82662054ffc8f123a7ffee7ed5aadd0d751b8c512ec82014a34a530b955">AOC_OUT_OF_BOUNDS</a>
 , <a class="el" href="#a88b53f82662054ffc8f123a7ffee7ed5adf4b56de54d52f5a0e64f5a61b46aee1">AOC_SOLUTION_NOT_COMPLETE</a>
+, <a class="el" href="#a88b53f82662054ffc8f123a7ffee7ed5a48c881a7283ed744b1df107b35d1f378">AOC_FILE_NOT_FOUND</a>
+, <br />
+&#160;&#160;<a class="el" href="#a88b53f82662054ffc8f123a7ffee7ed5ad46a41c338aef0e3c3c028627954be03">AOC_NOT_A_FILE</a>
 , <a class="el" href="#a88b53f82662054ffc8f123a7ffee7ed5a561c10c0cfbb9de31b32aaef73f47cb8">AOC_PIPE_FAILED</a>
 , <a class="el" href="#a88b53f82662054ffc8f123a7ffee7ed5a252eefa0c7a351909f15749509c199f7">AOC_NO_INPUT</a>
-, <br />
-&#160;&#160;<a class="el" href="#a88b53f82662054ffc8f123a7ffee7ed5a24fdaccbcd2f7086ab1dfc3b742c0cdc">AOC_ERR_END</a>
+, <a class="el" href="#a88b53f82662054ffc8f123a7ffee7ed5a24fdaccbcd2f7086ab1dfc3b742c0cdc">AOC_ERR_END</a>
 <br />
  }</td></tr>
 <tr class="memdesc:a88b53f82662054ffc8f123a7ffee7ed5"><td class="mdescLeft">&#160;</td><td class="mdescRight">File: <a class="el" href="util_8h.html">include/util.h</a> Created: 12/01/24 Author: Umut Sevdi Description: Utility library.  <a href="#a88b53f82662054ffc8f123a7ffee7ed5">More...</a><br /></td></tr>
@@ -150,17 +147,12 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0db4e57880c2b2ddcd90fd0706b4b81a" id="r_a0db4e57880c2b2ddcd90fd0706b4b81a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0db4e57880c2b2ddcd90fd0706b4b81a">read_input</a> (char *arg, <a class="el" href="structPipeInfo.html">PipeInfo</a> *pipe)</td></tr>
-<tr class="memdesc:a0db4e57880c2b2ddcd90fd0706b4b81a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the arg.  <br /></td></tr>
-<tr class="separator:a0db4e57880c2b2ddcd90fd0706b4b81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e01b48ac10830f8b9a9f7f3c92b4e00" id="r_a1e01b48ac10830f8b9a9f7f3c92b4e00"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e01b48ac10830f8b9a9f7f3c92b4e00">__now</a> ()</td></tr>
 <tr class="separator:a1e01b48ac10830f8b9a9f7f3c92b4e00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaeff92923022b210edb2371f4a370310" id="r_aaeff92923022b210edb2371f4a370310"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaeff92923022b210edb2371f4a370310">cmparg</a> (const char *l_opt, const char *s_opt, const char *arg)</td></tr>
-<tr class="memdesc:aaeff92923022b210edb2371f4a370310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares the given argument with <em>two NULL terminated strings</em>, Short and long versions.  <br /></td></tr>
-<tr class="separator:aaeff92923022b210edb2371f4a370310"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9459ac4ebc942fc74e4bda752d2b7f5d" id="r_a9459ac4ebc942fc74e4bda752d2b7f5d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9459ac4ebc942fc74e4bda752d2b7f5d">cmparg_s</a> (const char *opt, const char *arg)</td></tr>
-<tr class="memdesc:a9459ac4ebc942fc74e4bda752d2b7f5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares the given argument with a single NULL terminated string.  <br /></td></tr>
-<tr class="separator:a9459ac4ebc942fc74e4bda752d2b7f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ec50cbe0735fc65f2eff87afe8582a6" id="r_a9ec50cbe0735fc65f2eff87afe8582a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ec50cbe0735fc65f2eff87afe8582a6">swapl</a> (long *a, long *b)</td></tr>
+<tr class="separator:a9ec50cbe0735fc65f2eff87afe8582a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14bd4f5ee95b2004b49a706d6db4cea2" id="r_a14bd4f5ee95b2004b49a706d6db4cea2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14bd4f5ee95b2004b49a706d6db4cea2">sortl</a> (long *arr, int n)</td></tr>
+<tr class="separator:a14bd4f5ee95b2004b49a706d6db4cea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a5dd66fe6bc5d9d8521929591f7d6290f" name="a5dd66fe6bc5d9d8521929591f7d6290f"></a>
@@ -221,7 +213,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    fprintf(stderr, <span class="stringliteral">&quot;WARN  | %17s %s#%s():%-4d - &quot;</span> CODE <span class="stringliteral">&quot;\r\n&quot;</span>, <a class="code hl_function" href="#a1e01b48ac10830f8b9a9f7f3c92b4e00">__now</a>(),       \</div>
+<b>Value:</b><div class="fragment"><div class="line">    fprintf(stderr, <span class="stringliteral">&quot;WARN  | %17s %s#%s():%-4d - &quot;</span> #CODE <span class="stringliteral">&quot;\r\n&quot;</span>, <a class="code hl_function" href="#a1e01b48ac10830f8b9a9f7f3c92b4e00">__now</a>(),      \</div>
 <div class="line">            __FILE__, __PRETTY_FUNCTION__, __LINE__)</div>
 </div><!-- fragment -->
 </div>
@@ -244,10 +236,13 @@ Functions</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a08c0593463b66eec10c4268b2fe5b5db" name="a88b53f82662054ffc8f123a7ffee7ed5a08c0593463b66eec10c4268b2fe5b5db"></a>AOC_OK&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a16f155c72f099092ecb9b2e26fecbc0b" name="a88b53f82662054ffc8f123a7ffee7ed5a16f155c72f099092ecb9b2e26fecbc0b"></a>ADC_UNKNOWN_OPTION&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5aae78ffd50a3120deb4093ff03d6f956a" name="a88b53f82662054ffc8f123a7ffee7ed5aae78ffd50a3120deb4093ff03d6f956a"></a>AOC_NO_QUESTION_PROVIDED&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a4737baa9a9d3a86fca833afcaf154815" name="a88b53f82662054ffc8f123a7ffee7ed5a4737baa9a9d3a86fca833afcaf154815"></a>AOC_SOLUTION_ID_PARSE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a5e34561075ef24ae852b04ecce049e4b" name="a88b53f82662054ffc8f123a7ffee7ed5a5e34561075ef24ae852b04ecce049e4b"></a>AOC_NO_SUCH_QUESTION&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5aadd0d751b8c512ec82014a34a530b955" name="a88b53f82662054ffc8f123a7ffee7ed5aadd0d751b8c512ec82014a34a530b955"></a>AOC_OUT_OF_BOUNDS&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5adf4b56de54d52f5a0e64f5a61b46aee1" name="a88b53f82662054ffc8f123a7ffee7ed5adf4b56de54d52f5a0e64f5a61b46aee1"></a>AOC_SOLUTION_NOT_COMPLETE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a48c881a7283ed744b1df107b35d1f378" name="a88b53f82662054ffc8f123a7ffee7ed5a48c881a7283ed744b1df107b35d1f378"></a>AOC_FILE_NOT_FOUND&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5ad46a41c338aef0e3c3c028627954be03" name="a88b53f82662054ffc8f123a7ffee7ed5ad46a41c338aef0e3c3c028627954be03"></a>AOC_NOT_A_FILE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a561c10c0cfbb9de31b32aaef73f47cb8" name="a88b53f82662054ffc8f123a7ffee7ed5a561c10c0cfbb9de31b32aaef73f47cb8"></a>AOC_PIPE_FAILED&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a252eefa0c7a351909f15749509c199f7" name="a88b53f82662054ffc8f123a7ffee7ed5a252eefa0c7a351909f15749509c199f7"></a>AOC_NO_INPUT&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a24fdaccbcd2f7086ab1dfc3b742c0cdc" name="a88b53f82662054ffc8f123a7ffee7ed5a24fdaccbcd2f7086ab1dfc3b742c0cdc"></a>AOC_ERR_END&#160;</td><td class="fielddoc"></td></tr>
@@ -273,107 +268,61 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aaeff92923022b210edb2371f4a370310" name="aaeff92923022b210edb2371f4a370310"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaeff92923022b210edb2371f4a370310">&#9670;&#160;</a></span>cmparg()</h2>
+<a id="a14bd4f5ee95b2004b49a706d6db4cea2" name="a14bd4f5ee95b2004b49a706d6db4cea2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14bd4f5ee95b2004b49a706d6db4cea2">&#9670;&#160;</a></span>sortl()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool cmparg </td>
+          <td class="memname">void sortl </td>
           <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>l_opt</em></span>, </td>
+          <td class="paramtype">long *</td>          <td class="paramname"><span class="paramname"><em>arr</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>s_opt</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>arg</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Compares the given argument with <em>two NULL terminated strings</em>, Short and long versions. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">l_opt</td><td>- NULL terminated long command. Example: &ndash;help </td></tr>
-    <tr><td class="paramname">s_opt</td><td>- NULL terminated short command. Example: -h </td></tr>
-    <tr><td class="paramname">arg</td><td>- arg to compare</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>whether the argument matches or not </dd></dl>
-
 </div>
 </div>
-<a id="a9459ac4ebc942fc74e4bda752d2b7f5d" name="a9459ac4ebc942fc74e4bda752d2b7f5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9459ac4ebc942fc74e4bda752d2b7f5d">&#9670;&#160;</a></span>cmparg_s()</h2>
+<a id="a9ec50cbe0735fc65f2eff87afe8582a6" name="a9ec50cbe0735fc65f2eff87afe8582a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ec50cbe0735fc65f2eff87afe8582a6">&#9670;&#160;</a></span>swapl()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool cmparg_s </td>
+          <td class="memname">void swapl </td>
           <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>opt</em></span>, </td>
+          <td class="paramtype">long *</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>arg</em></span>&#160;)</td>
+          <td class="paramtype">long *</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-
-<p>Compares the given argument with a single NULL terminated string. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">opt</td><td>- NULL terminated long command. Example: &ndash;help </td></tr>
-    <tr><td class="paramname">arg</td><td>- arg to compare</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>whether the argument matches or not </dd></dl>
-
-</div>
-</div>
-<a id="a0db4e57880c2b2ddcd90fd0706b4b81a" name="a0db4e57880c2b2ddcd90fd0706b4b81a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0db4e57880c2b2ddcd90fd0706b4b81a">&#9670;&#160;</a></span>read_input()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int read_input </td>
-          <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>arg</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structPipeInfo.html">PipeInfo</a> *</td>          <td class="paramname"><span class="paramname"><em>pipe</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Reads the arg. </p>
-<p>If there is no argument, fills the pipe. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">arg</td><td>- arg to select. </td></tr>
-    <tr><td class="paramname">pipe</td><td>- empty pipe object to fill in case of an empty arg.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Selected buffer.<ul>
-<li>0 : arg</li>
-<li>1 : pipe</li>
-<li>AOC_PIPE_FAILED : on allocation errors </li>
-</ul>
-</dd></dl>
 
 </div>
 </div>

@@ -15,47 +15,25 @@ const char* __now()
     return string;
 }
 
-bool cmparg(const char* l_opt, const char* s_opt, const char* arg)
+inline void swapl(long* a, long* b)
 {
-    if (l_opt == NULL || s_opt == NULL || arg == NULL) { return false; }
-    int l_opt_len = strlen(l_opt);
-    int s_opt_len = strlen(s_opt);
-    return strncmp(s_opt, arg, s_opt_len) == 0
-           || strncmp(l_opt, arg, l_opt_len) == 0;
+    int t = *a;
+    *a = *b;
+    *b = t;
 }
 
-bool cmparg_s(const char* opt, const char* arg)
+inline void sortl(long* arr, int n)
 {
-    if (opt == NULL || arg == NULL) { return false; }
-    return strncmp(opt, arg, strlen(opt)) == 0;
-}
-
-int read_input(char* arg, PipeInfo* pipe)
-{
-    // if there is an arg use it instead of pipe
-    if (arg != NULL && strlen(arg) != 0) { return 0; }
-    char buffer[4096] = {0};
-    char* tmp = NULL;
-    tmp = calloc(sizeof(buffer), sizeof(char));
-    if (tmp == NULL) { return ERROR(AOC_PIPE_FAILED); }
-    pipe->in = tmp;
-    pipe->size = sizeof(buffer);
-    size_t buffer_len = 0;
-    while (fgets(buffer, sizeof(buffer), stdin)) {
-        buffer_len = strnlen(buffer, sizeof(buffer));
-        if (pipe->cursor + buffer_len > pipe->size) {
-            tmp = realloc(pipe->in, pipe->size * 2);
-            if (tmp == NULL) {
-                free(pipe->in);
-                return ERROR(AOC_PIPE_FAILED);
+    int i, j;
+    bool swapped;
+    for (i = 0; i < n - 1; i++) {
+        swapped = false;
+        for (j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                swapl(&arr[j], &arr[j + 1]);
+                swapped = true;
             }
-            pipe->in = tmp;
-            pipe->size *= 2;
-        };
-        memcpy(pipe->in + pipe->cursor, buffer, buffer_len);
-        pipe->cursor += buffer_len;
-        pipe->in[pipe->cursor] = '\0';
+        }
+        if (swapped == false) break;
     }
-    if (strnlen(pipe->in, pipe->size) == 0) { return ERROR(AOC_NO_INPUT); }
-    return 1;
 }

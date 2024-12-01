@@ -112,15 +112,10 @@ $(function(){initNavTree('util_8c.html',''); initResizable(true); });
 Functions</h2></td></tr>
 <tr class="memitem:a1e01b48ac10830f8b9a9f7f3c92b4e00" id="r_a1e01b48ac10830f8b9a9f7f3c92b4e00"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e01b48ac10830f8b9a9f7f3c92b4e00">__now</a> ()</td></tr>
 <tr class="separator:a1e01b48ac10830f8b9a9f7f3c92b4e00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaeff92923022b210edb2371f4a370310" id="r_aaeff92923022b210edb2371f4a370310"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaeff92923022b210edb2371f4a370310">cmparg</a> (const char *l_opt, const char *s_opt, const char *arg)</td></tr>
-<tr class="memdesc:aaeff92923022b210edb2371f4a370310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares the given argument with <em>two NULL terminated strings</em>, Short and long versions.  <br /></td></tr>
-<tr class="separator:aaeff92923022b210edb2371f4a370310"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9459ac4ebc942fc74e4bda752d2b7f5d" id="r_a9459ac4ebc942fc74e4bda752d2b7f5d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9459ac4ebc942fc74e4bda752d2b7f5d">cmparg_s</a> (const char *opt, const char *arg)</td></tr>
-<tr class="memdesc:a9459ac4ebc942fc74e4bda752d2b7f5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares the given argument with a single NULL terminated string.  <br /></td></tr>
-<tr class="separator:a9459ac4ebc942fc74e4bda752d2b7f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0db4e57880c2b2ddcd90fd0706b4b81a" id="r_a0db4e57880c2b2ddcd90fd0706b4b81a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0db4e57880c2b2ddcd90fd0706b4b81a">read_input</a> (char *arg, <a class="el" href="structPipeInfo.html">PipeInfo</a> *pipe)</td></tr>
-<tr class="memdesc:a0db4e57880c2b2ddcd90fd0706b4b81a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the arg.  <br /></td></tr>
-<tr class="separator:a0db4e57880c2b2ddcd90fd0706b4b81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ec50cbe0735fc65f2eff87afe8582a6" id="r_a9ec50cbe0735fc65f2eff87afe8582a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ec50cbe0735fc65f2eff87afe8582a6">swapl</a> (long *a, long *b)</td></tr>
+<tr class="separator:a9ec50cbe0735fc65f2eff87afe8582a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14bd4f5ee95b2004b49a706d6db4cea2" id="r_a14bd4f5ee95b2004b49a706d6db4cea2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14bd4f5ee95b2004b49a706d6db4cea2">sortl</a> (long *arr, int n)</td></tr>
+<tr class="separator:a14bd4f5ee95b2004b49a706d6db4cea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -145,107 +140,61 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aaeff92923022b210edb2371f4a370310" name="aaeff92923022b210edb2371f4a370310"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaeff92923022b210edb2371f4a370310">&#9670;&#160;</a></span>cmparg()</h2>
+<a id="a14bd4f5ee95b2004b49a706d6db4cea2" name="a14bd4f5ee95b2004b49a706d6db4cea2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14bd4f5ee95b2004b49a706d6db4cea2">&#9670;&#160;</a></span>sortl()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool cmparg </td>
+          <td class="memname">void sortl </td>
           <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>l_opt</em></span>, </td>
+          <td class="paramtype">long *</td>          <td class="paramname"><span class="paramname"><em>arr</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>s_opt</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>arg</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Compares the given argument with <em>two NULL terminated strings</em>, Short and long versions. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">l_opt</td><td>- NULL terminated long command. Example: &ndash;help </td></tr>
-    <tr><td class="paramname">s_opt</td><td>- NULL terminated short command. Example: -h </td></tr>
-    <tr><td class="paramname">arg</td><td>- arg to compare</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>whether the argument matches or not </dd></dl>
-
 </div>
 </div>
-<a id="a9459ac4ebc942fc74e4bda752d2b7f5d" name="a9459ac4ebc942fc74e4bda752d2b7f5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9459ac4ebc942fc74e4bda752d2b7f5d">&#9670;&#160;</a></span>cmparg_s()</h2>
+<a id="a9ec50cbe0735fc65f2eff87afe8582a6" name="a9ec50cbe0735fc65f2eff87afe8582a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ec50cbe0735fc65f2eff87afe8582a6">&#9670;&#160;</a></span>swapl()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool cmparg_s </td>
+          <td class="memname">void swapl </td>
           <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>opt</em></span>, </td>
+          <td class="paramtype">long *</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>arg</em></span>&#160;)</td>
+          <td class="paramtype">long *</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-
-<p>Compares the given argument with a single NULL terminated string. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">opt</td><td>- NULL terminated long command. Example: &ndash;help </td></tr>
-    <tr><td class="paramname">arg</td><td>- arg to compare</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>whether the argument matches or not </dd></dl>
-
-</div>
-</div>
-<a id="a0db4e57880c2b2ddcd90fd0706b4b81a" name="a0db4e57880c2b2ddcd90fd0706b4b81a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0db4e57880c2b2ddcd90fd0706b4b81a">&#9670;&#160;</a></span>read_input()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int read_input </td>
-          <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>arg</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structPipeInfo.html">PipeInfo</a> *</td>          <td class="paramname"><span class="paramname"><em>pipe</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Reads the arg. </p>
-<p>If there is no argument, fills the pipe. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">arg</td><td>- arg to select. </td></tr>
-    <tr><td class="paramname">pipe</td><td>- empty pipe object to fill in case of an empty arg.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Selected buffer.<ul>
-<li>0 : arg</li>
-<li>1 : pipe</li>
-<li>AOC_PIPE_FAILED : on allocation errors </li>
-</ul>
-</dd></dl>
 
 </div>
 </div>

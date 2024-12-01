@@ -1,9 +1,10 @@
 
 #include "aoc.h"
+#include "cli.h"
 #include "util.h"
 #include <errno.h>
 #define CAPACITY 4096
-static enum aoc_code_t run(char* argv);
+static enum aoc_code_t run(CliInput* argv);
 SOLUTION(
     1,
     {.cmd = "--historian-hysteria",
@@ -51,10 +52,10 @@ SOLUTION(
          "Historians reconcile their lists?\r\n",
      .run = run});
 
-static enum aoc_code_t parse_args(const char* input, long* tokens,
+static enum aoc_code_t parse_args(const CliInput* input, long* tokens,
                                   size_t token_max_size, size_t* token_len)
 {
-    char* token_head = strdup(input);
+    char* token_head = strdup(input->data);
     char* token = token_head;
     char* saveptr;
     token = strtok_r(token, "\r\n \t", &saveptr);
@@ -78,30 +79,7 @@ static enum aoc_code_t parse_args(const char* input, long* tokens,
     return AOC_OK;
 }
 
-inline static void _swap(long* a, long* b)
-{
-    int t = *a;
-    *a = *b;
-    *b = t;
-}
-
-inline static void bubble_sort(long* arr, int n)
-{
-    int i, j;
-    bool swapped;
-    for (i = 0; i < n - 1; i++) {
-        swapped = false;
-        for (j = 0; j < n - i - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
-                _swap(&arr[j], &arr[j + 1]);
-                swapped = true;
-            }
-        }
-        if (swapped == false) break;
-    }
-}
-
-static enum aoc_code_t run_part_1(long* tokens, size_t tokens_len)
+static enum aoc_code_t run_part1(long* tokens, size_t tokens_len)
 {
 
     long* left = malloc(tokens_len / 2 * sizeof(long));
@@ -114,8 +92,8 @@ static enum aoc_code_t run_part_1(long* tokens, size_t tokens_len)
             right[i / 2] = tokens[i];
         }
     }
-    bubble_sort(right, tokens_len / 2);
-    bubble_sort(left, tokens_len / 2);
+    sortl(right, tokens_len / 2);
+    sortl(left, tokens_len / 2);
 
     long result = 0;
     for (size_t i = 0; i < tokens_len / 2; i++) {
@@ -127,7 +105,7 @@ static enum aoc_code_t run_part_1(long* tokens, size_t tokens_len)
     return AOC_OK;
 }
 
-static enum aoc_code_t run_part_2(long* tokens, size_t tokens_len)
+static enum aoc_code_t run_part2(long* tokens, size_t tokens_len)
 {
     long* left = malloc(tokens_len / 2 * sizeof(long));
     long* right = malloc(tokens_len / 2 * sizeof(long));
@@ -138,7 +116,7 @@ static enum aoc_code_t run_part_2(long* tokens, size_t tokens_len)
             right[i / 2] = tokens[i];
         }
     }
-    bubble_sort(right, tokens_len / 2);
+    sortl(right, tokens_len / 2);
 
     /* an array that contains how many times given value occurred. 
     * Only fills the first instances. For example:
@@ -181,13 +159,14 @@ static enum aoc_code_t run_part_2(long* tokens, size_t tokens_len)
     free(occurrence_table);
     return AOC_OK;
 }
-static enum aoc_code_t run(char* input)
+
+static enum aoc_code_t run(CliInput* argv)
 {
     long tokens[CAPACITY] = {0};
     size_t tokens_len = 0;
-    parse_args(input, tokens, CAPACITY, &tokens_len);
+    parse_args(argv, tokens, CAPACITY, &tokens_len);
 
-    run_part_1(tokens, tokens_len);
-    run_part_2(tokens, tokens_len);
+    run_part1(tokens, tokens_len);
+    run_part2(tokens, tokens_len);
     return AOC_OK;
 }

@@ -106,6 +106,7 @@ $(function(){initNavTree('solution_8c.html',''); initResizable(true); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="aoc_8h_source.html">aoc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="cli_8h_source.html">cli.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="util_8h_source.html">util.h</a>&quot;</code><br />
 <code>#include &lt;errno.h&gt;</code><br />
 </div><table class="memberdecls">
@@ -116,20 +117,16 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a6854ae3b04d70c19e132960723b3efcc" id="r_a6854ae3b04d70c19e132960723b3efcc"><td class="memItemLeft" align="right" valign="top">static enum <a class="el" href="util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5">aoc_code_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6854ae3b04d70c19e132960723b3efcc">run</a> (char *argv)</td></tr>
-<tr class="separator:a6854ae3b04d70c19e132960723b3efcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab25e2c7eb016b06e0385bdd8bd363751" id="r_ab25e2c7eb016b06e0385bdd8bd363751"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab25e2c7eb016b06e0385bdd8bd363751">SOLUTION</a> (1, {.cmd=&quot;--historian-hysteria&quot;,.description=&quot;The Chief Historian is always present for the big Christmas\r\n&quot; &quot;sleigh launch, but nobody has seen him in months! Last anyone\r\n&quot; &quot;heard, he was visiting locations that are historically\r\n&quot; &quot;significant to the North Pole; a group of Senior Historians has\r\n&quot; &quot;asked you to accompany them as they check the places they think\r\n&quot; &quot;he was most likely to visit.\r\n&quot; &quot;\r\n&quot; &quot;As each location is checked, they will mark it on their list\r\n&quot; &quot;with a star. They figure the Chief Historian must be in one\r\n&quot; &quot;of the first fifty places they'll look, so in order to save\r\n&quot; &quot;Christmas, you need to <a class="el" href="main_8c.html#a97ee70a8770dc30d06c744b24eb2fcfc">help</a> them get fifty stars on their list\r\n&quot; &quot;before Santa takes off on December 25th.\r\n&quot; &quot;\r\n&quot; &quot;Collect stars by solving puzzles. Two puzzles will be made\r\n&quot; &quot;available on each day in the Advent calendar; the second\r\n&quot; &quot;puzzle is unlocked when you complete the first. Each puzzle\r\n&quot; &quot;grants one star. Good luck!\r\n&quot; &quot;\r\n&quot; &quot;You haven't even left yet and the group of Elvish Senior\r\n&quot; &quot;Historians has already hit a problem: their list of locations\r\n&quot; &quot;to check is currently empty. Eventually, someone decides that\r\n&quot; &quot;the best place to check first would be the Chief\r\n&quot; &quot;Historian's office.\r\n&quot; &quot;\r\n&quot; &quot;Upon pouring into the office, everyone confirms that the\r\n&quot; &quot;Chief Historian is indeed nowhere to be found. Instead, the\r\n&quot; &quot;Elves discover an assortment of notes and lists of historically\r\n&quot; &quot;significant locations! This seems to be the planning the \r\n&quot; &quot;Chief Historian was doing before he left. Perhaps these\r\n&quot; &quot;notes can be used to determine which locations to search?\r\n&quot; &quot;\r\n&quot; &quot;Throughout the Chief's office, the historically significant\r\n&quot; &quot;locations are listed not by name but by a unique number called\r\n&quot; &quot;the location ID. To make sure they don't miss anything,\r\n&quot; &quot;The Historians split into two groups, each searching the office \r\n&quot; &quot;and trying to create their own complete list of location IDs.\r\n&quot; &quot;\r\n&quot; &quot;There's just one problem: by holding the two lists up side\r\n&quot; &quot;by side (your puzzle input), it quickly becomes clear that \r\n&quot; &quot;the lists aren't very similar. Maybe you can <a class="el" href="main_8c.html#a97ee70a8770dc30d06c744b24eb2fcfc">help</a> The\r\n&quot; &quot;Historians reconcile their lists?\r\n&quot;,.<a class="el" href="#a6854ae3b04d70c19e132960723b3efcc">run</a>=<a class="el" href="#a6854ae3b04d70c19e132960723b3efcc">run</a>})</td></tr>
+<tr class="memitem:a496ba9ac1eb70627e5da3a62ae697b3e" id="r_a496ba9ac1eb70627e5da3a62ae697b3e"><td class="memItemLeft" align="right" valign="top">static enum <a class="el" href="util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5">aoc_code_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a496ba9ac1eb70627e5da3a62ae697b3e">run</a> (<a class="el" href="structCliInput.html">CliInput</a> *argv)</td></tr>
+<tr class="separator:a496ba9ac1eb70627e5da3a62ae697b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab25e2c7eb016b06e0385bdd8bd363751" id="r_ab25e2c7eb016b06e0385bdd8bd363751"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab25e2c7eb016b06e0385bdd8bd363751">SOLUTION</a> (1, {.cmd=&quot;--historian-hysteria&quot;,.description=&quot;The Chief Historian is always present for the big Christmas\r\n&quot; &quot;sleigh launch, but nobody has seen him in months! Last anyone\r\n&quot; &quot;heard, he was visiting locations that are historically\r\n&quot; &quot;significant to the North Pole; a group of Senior Historians has\r\n&quot; &quot;asked you to accompany them as they check the places they think\r\n&quot; &quot;he was most likely to visit.\r\n&quot; &quot;\r\n&quot; &quot;As each location is checked, they will mark it on their list\r\n&quot; &quot;with a star. They figure the Chief Historian must be in one\r\n&quot; &quot;of the first fifty places they'll look, so in order to save\r\n&quot; &quot;Christmas, you need to <a class="el" href="main_8c.html#a97ee70a8770dc30d06c744b24eb2fcfc">help</a> them get fifty stars on their list\r\n&quot; &quot;before Santa takes off on December 25th.\r\n&quot; &quot;\r\n&quot; &quot;Collect stars by solving puzzles. Two puzzles will be made\r\n&quot; &quot;available on each day in the Advent calendar; the second\r\n&quot; &quot;puzzle is unlocked when you complete the first. Each puzzle\r\n&quot; &quot;grants one star. Good luck!\r\n&quot; &quot;\r\n&quot; &quot;You haven't even left yet and the group of Elvish Senior\r\n&quot; &quot;Historians has already hit a problem: their list of locations\r\n&quot; &quot;to check is currently empty. Eventually, someone decides that\r\n&quot; &quot;the best place to check first would be the Chief\r\n&quot; &quot;Historian's office.\r\n&quot; &quot;\r\n&quot; &quot;Upon pouring into the office, everyone confirms that the\r\n&quot; &quot;Chief Historian is indeed nowhere to be found. Instead, the\r\n&quot; &quot;Elves discover an assortment of notes and lists of historically\r\n&quot; &quot;significant locations! This seems to be the planning the \r\n&quot; &quot;Chief Historian was doing before he left. Perhaps these\r\n&quot; &quot;notes can be used to determine which locations to search?\r\n&quot; &quot;\r\n&quot; &quot;Throughout the Chief's office, the historically significant\r\n&quot; &quot;locations are listed not by name but by a unique number called\r\n&quot; &quot;the location ID. To make sure they don't miss anything,\r\n&quot; &quot;The Historians split into two groups, each searching the office \r\n&quot; &quot;and trying to create their own complete list of location IDs.\r\n&quot; &quot;\r\n&quot; &quot;There's just one problem: by holding the two lists up side\r\n&quot; &quot;by side (your puzzle input), it quickly becomes clear that \r\n&quot; &quot;the lists aren't very similar. Maybe you can <a class="el" href="main_8c.html#a97ee70a8770dc30d06c744b24eb2fcfc">help</a> The\r\n&quot; &quot;Historians reconcile their lists?\r\n&quot;,.<a class="el" href="#a496ba9ac1eb70627e5da3a62ae697b3e">run</a>=<a class="el" href="#a496ba9ac1eb70627e5da3a62ae697b3e">run</a>})</td></tr>
 <tr class="separator:ab25e2c7eb016b06e0385bdd8bd363751"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb67460909f22d4559a1e788d27c5b32" id="r_afb67460909f22d4559a1e788d27c5b32"><td class="memItemLeft" align="right" valign="top">static enum <a class="el" href="util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5">aoc_code_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb67460909f22d4559a1e788d27c5b32">parse_args</a> (const char *input, long *tokens, size_t token_max_size, size_t *token_len)</td></tr>
-<tr class="separator:afb67460909f22d4559a1e788d27c5b32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87295d78de234832a28ddead42a0df62" id="r_a87295d78de234832a28ddead42a0df62"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87295d78de234832a28ddead42a0df62">_swap</a> (long *a, long *b)</td></tr>
-<tr class="separator:a87295d78de234832a28ddead42a0df62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7d5282ffdf9dda83e42228f460ad598" id="r_ae7d5282ffdf9dda83e42228f460ad598"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7d5282ffdf9dda83e42228f460ad598">bubble_sort</a> (long *arr, int n)</td></tr>
-<tr class="separator:ae7d5282ffdf9dda83e42228f460ad598"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac843857b403e4793aba92976407c9620" id="r_ac843857b403e4793aba92976407c9620"><td class="memItemLeft" align="right" valign="top">static enum <a class="el" href="util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5">aoc_code_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac843857b403e4793aba92976407c9620">run_part_1</a> (long *tokens, size_t tokens_len)</td></tr>
-<tr class="separator:ac843857b403e4793aba92976407c9620"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae95998f57dcee7ce2e05c98107f5a574" id="r_ae95998f57dcee7ce2e05c98107f5a574"><td class="memItemLeft" align="right" valign="top">static enum <a class="el" href="util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5">aoc_code_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae95998f57dcee7ce2e05c98107f5a574">run_part_2</a> (long *tokens, size_t tokens_len)</td></tr>
-<tr class="separator:ae95998f57dcee7ce2e05c98107f5a574"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b4f81ad3e34d1dc317136ca931fa2af" id="r_a8b4f81ad3e34d1dc317136ca931fa2af"><td class="memItemLeft" align="right" valign="top">static enum <a class="el" href="util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5">aoc_code_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b4f81ad3e34d1dc317136ca931fa2af">parse_args</a> (const <a class="el" href="structCliInput.html">CliInput</a> *input, long *tokens, size_t token_max_size, size_t *token_len)</td></tr>
+<tr class="separator:a8b4f81ad3e34d1dc317136ca931fa2af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab90b956b664f772885b2b76f34a2603c" id="r_ab90b956b664f772885b2b76f34a2603c"><td class="memItemLeft" align="right" valign="top">static enum <a class="el" href="util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5">aoc_code_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab90b956b664f772885b2b76f34a2603c">run_part1</a> (long *tokens, size_t tokens_len)</td></tr>
+<tr class="separator:ab90b956b664f772885b2b76f34a2603c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceef00eb0c2da602c92d29ddef0a3b96" id="r_aceef00eb0c2da602c92d29ddef0a3b96"><td class="memItemLeft" align="right" valign="top">static enum <a class="el" href="util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5">aoc_code_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aceef00eb0c2da602c92d29ddef0a3b96">run_part2</a> (long *tokens, size_t tokens_len)</td></tr>
+<tr class="separator:aceef00eb0c2da602c92d29ddef0a3b96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a91fbe6020a4bbd73084f0681b9092479" name="a91fbe6020a4bbd73084f0681b9092479"></a>
@@ -147,66 +144,8 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a87295d78de234832a28ddead42a0df62" name="a87295d78de234832a28ddead42a0df62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87295d78de234832a28ddead42a0df62">&#9670;&#160;</a></span>_swap()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void _swap </td>
-          <td>(</td>
-          <td class="paramtype">long *</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long *</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae7d5282ffdf9dda83e42228f460ad598" name="ae7d5282ffdf9dda83e42228f460ad598"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7d5282ffdf9dda83e42228f460ad598">&#9670;&#160;</a></span>bubble_sort()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void bubble_sort </td>
-          <td>(</td>
-          <td class="paramtype">long *</td>          <td class="paramname"><span class="paramname"><em>arr</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="afb67460909f22d4559a1e788d27c5b32" name="afb67460909f22d4559a1e788d27c5b32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb67460909f22d4559a1e788d27c5b32">&#9670;&#160;</a></span>parse_args()</h2>
+<a id="a8b4f81ad3e34d1dc317136ca931fa2af" name="a8b4f81ad3e34d1dc317136ca931fa2af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b4f81ad3e34d1dc317136ca931fa2af">&#9670;&#160;</a></span>parse_args()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -217,7 +156,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">static enum <a class="el" href="util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5">aoc_code_t</a> parse_args </td>
           <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>input</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="structCliInput.html">CliInput</a> *</td>          <td class="paramname"><span class="paramname"><em>input</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -244,8 +183,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a6854ae3b04d70c19e132960723b3efcc" name="a6854ae3b04d70c19e132960723b3efcc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6854ae3b04d70c19e132960723b3efcc">&#9670;&#160;</a></span>run()</h2>
+<a id="a496ba9ac1eb70627e5da3a62ae697b3e" name="a496ba9ac1eb70627e5da3a62ae697b3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a496ba9ac1eb70627e5da3a62ae697b3e">&#9670;&#160;</a></span>run()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -256,7 +195,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">static enum <a class="el" href="util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5">aoc_code_t</a> run </td>
           <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>argv</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structCliInput.html">CliInput</a> *</td>          <td class="paramname"><span class="paramname"><em>argv</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -269,8 +208,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac843857b403e4793aba92976407c9620" name="ac843857b403e4793aba92976407c9620"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac843857b403e4793aba92976407c9620">&#9670;&#160;</a></span>run_part_1()</h2>
+<a id="ab90b956b664f772885b2b76f34a2603c" name="ab90b956b664f772885b2b76f34a2603c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab90b956b664f772885b2b76f34a2603c">&#9670;&#160;</a></span>run_part1()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -279,7 +218,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static enum <a class="el" href="util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5">aoc_code_t</a> run_part_1 </td>
+          <td class="memname">static enum <a class="el" href="util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5">aoc_code_t</a> run_part1 </td>
           <td>(</td>
           <td class="paramtype">long *</td>          <td class="paramname"><span class="paramname"><em>tokens</em></span>, </td>
         </tr>
@@ -298,8 +237,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae95998f57dcee7ce2e05c98107f5a574" name="ae95998f57dcee7ce2e05c98107f5a574"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae95998f57dcee7ce2e05c98107f5a574">&#9670;&#160;</a></span>run_part_2()</h2>
+<a id="aceef00eb0c2da602c92d29ddef0a3b96" name="aceef00eb0c2da602c92d29ddef0a3b96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aceef00eb0c2da602c92d29ddef0a3b96">&#9670;&#160;</a></span>run_part2()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -308,7 +247,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static enum <a class="el" href="util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5">aoc_code_t</a> run_part_2 </td>
+          <td class="memname">static enum <a class="el" href="util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5">aoc_code_t</a> run_part2 </td>
           <td>(</td>
           <td class="paramtype">long *</td>          <td class="paramname"><span class="paramname"><em>tokens</em></span>, </td>
         </tr>
@@ -341,7 +280,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">{.cmd=&quot;--historian-hysteria&quot;,.description=&quot;The Chief Historian is always present for the big Christmas\r\n&quot; &quot;sleigh launch, but nobody has seen him in months! Last anyone\r\n&quot; &quot;heard, he was visiting locations that are historically\r\n&quot; &quot;significant to the North Pole; a group of Senior Historians has\r\n&quot; &quot;asked you to accompany them as they check the places they think\r\n&quot; &quot;he was most likely to visit.\r\n&quot; &quot;\r\n&quot; &quot;As each location is checked, they will mark it on their list\r\n&quot; &quot;with a star. They figure the Chief Historian must be in one\r\n&quot; &quot;of the first fifty places they'll look, so in order to save\r\n&quot; &quot;Christmas, you need to <a class="el" href="main_8c.html#a97ee70a8770dc30d06c744b24eb2fcfc">help</a> them get fifty stars on their list\r\n&quot; &quot;before Santa takes off on December 25th.\r\n&quot; &quot;\r\n&quot; &quot;Collect stars by solving puzzles. Two puzzles will be made\r\n&quot; &quot;available on each day in the Advent calendar; the second\r\n&quot; &quot;puzzle is unlocked when you complete the first. Each puzzle\r\n&quot; &quot;grants one star. Good luck!\r\n&quot; &quot;\r\n&quot; &quot;You haven't even left yet and the group of Elvish Senior\r\n&quot; &quot;Historians has already hit a problem: their list of locations\r\n&quot; &quot;to check is currently empty. Eventually, someone decides that\r\n&quot; &quot;the best place to check first would be the Chief\r\n&quot; &quot;Historian's office.\r\n&quot; &quot;\r\n&quot; &quot;Upon pouring into the office, everyone confirms that the\r\n&quot; &quot;Chief Historian is indeed nowhere to be found. Instead, the\r\n&quot; &quot;Elves discover an assortment of notes and lists of historically\r\n&quot; &quot;significant locations! This seems to be the planning the \r\n&quot; &quot;Chief Historian was doing before he left. Perhaps these\r\n&quot; &quot;notes can be used to determine which locations to search?\r\n&quot; &quot;\r\n&quot; &quot;Throughout the Chief's office, the historically significant\r\n&quot; &quot;locations are listed not by name but by a unique number called\r\n&quot; &quot;the location ID. To make sure they don't miss anything,\r\n&quot; &quot;The Historians split into two groups, each searching the office \r\n&quot; &quot;and trying to create their own complete list of location IDs.\r\n&quot; &quot;\r\n&quot; &quot;There's just one problem: by holding the two lists up side\r\n&quot; &quot;by side (your puzzle input), it quickly becomes clear that \r\n&quot; &quot;the lists aren't very similar. Maybe you can <a class="el" href="main_8c.html#a97ee70a8770dc30d06c744b24eb2fcfc">help</a> The\r\n&quot; &quot;Historians reconcile their lists?\r\n&quot;,.<a class="el" href="#a6854ae3b04d70c19e132960723b3efcc">run</a>=<a class="el" href="#a6854ae3b04d70c19e132960723b3efcc">run</a>}</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">{.cmd=&quot;--historian-hysteria&quot;,.description=&quot;The Chief Historian is always present for the big Christmas\r\n&quot; &quot;sleigh launch, but nobody has seen him in months! Last anyone\r\n&quot; &quot;heard, he was visiting locations that are historically\r\n&quot; &quot;significant to the North Pole; a group of Senior Historians has\r\n&quot; &quot;asked you to accompany them as they check the places they think\r\n&quot; &quot;he was most likely to visit.\r\n&quot; &quot;\r\n&quot; &quot;As each location is checked, they will mark it on their list\r\n&quot; &quot;with a star. They figure the Chief Historian must be in one\r\n&quot; &quot;of the first fifty places they'll look, so in order to save\r\n&quot; &quot;Christmas, you need to <a class="el" href="main_8c.html#a97ee70a8770dc30d06c744b24eb2fcfc">help</a> them get fifty stars on their list\r\n&quot; &quot;before Santa takes off on December 25th.\r\n&quot; &quot;\r\n&quot; &quot;Collect stars by solving puzzles. Two puzzles will be made\r\n&quot; &quot;available on each day in the Advent calendar; the second\r\n&quot; &quot;puzzle is unlocked when you complete the first. Each puzzle\r\n&quot; &quot;grants one star. Good luck!\r\n&quot; &quot;\r\n&quot; &quot;You haven't even left yet and the group of Elvish Senior\r\n&quot; &quot;Historians has already hit a problem: their list of locations\r\n&quot; &quot;to check is currently empty. Eventually, someone decides that\r\n&quot; &quot;the best place to check first would be the Chief\r\n&quot; &quot;Historian's office.\r\n&quot; &quot;\r\n&quot; &quot;Upon pouring into the office, everyone confirms that the\r\n&quot; &quot;Chief Historian is indeed nowhere to be found. Instead, the\r\n&quot; &quot;Elves discover an assortment of notes and lists of historically\r\n&quot; &quot;significant locations! This seems to be the planning the \r\n&quot; &quot;Chief Historian was doing before he left. Perhaps these\r\n&quot; &quot;notes can be used to determine which locations to search?\r\n&quot; &quot;\r\n&quot; &quot;Throughout the Chief's office, the historically significant\r\n&quot; &quot;locations are listed not by name but by a unique number called\r\n&quot; &quot;the location ID. To make sure they don't miss anything,\r\n&quot; &quot;The Historians split into two groups, each searching the office \r\n&quot; &quot;and trying to create their own complete list of location IDs.\r\n&quot; &quot;\r\n&quot; &quot;There's just one problem: by holding the two lists up side\r\n&quot; &quot;by side (your puzzle input), it quickly becomes clear that \r\n&quot; &quot;the lists aren't very similar. Maybe you can <a class="el" href="main_8c.html#a97ee70a8770dc30d06c744b24eb2fcfc">help</a> The\r\n&quot; &quot;Historians reconcile their lists?\r\n&quot;,.<a class="el" href="#a496ba9ac1eb70627e5da3a62ae697b3e">run</a>=<a class="el" href="#a496ba9ac1eb70627e5da3a62ae697b3e">run</a>}</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">

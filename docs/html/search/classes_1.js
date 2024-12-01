@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pipeinfo_0',['PipeInfo',['../structPipeInfo.html',1,'']]]
+  ['cliinput_0',['CliInput',['../structCliInput.html',1,'']]]
 ];

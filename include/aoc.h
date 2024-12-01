@@ -9,6 +9,7 @@
  * Project: umutsevdi/aoc-2024
  * License: MIT License
  ******************************************************************************/
+#include "cli.h"
 /**
  * An interface for any Advent of Code problem
  */
@@ -18,7 +19,7 @@ typedef struct aoc_solution_t {
     /* Description of the problem */
     const char* description;
     /* Function to execute, NULL if the question is not finished yet */
-    enum aoc_code_t (*run)(char* input);
+    enum aoc_code_t (*run)(CliInput* input);
 } Solution;
 
 #define SOLUTION_SIZE 25
