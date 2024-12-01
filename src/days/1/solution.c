@@ -2,6 +2,7 @@
 #include "aoc.h"
 #include "util.h"
 
+static void run(char* argv);
 SOLUTION(
     1,
     {.cmd = "--historian-hysteria",
@@ -47,4 +48,6 @@ SOLUTION(
          "by side (your puzzle input), it quickly becomes clear that \r\n"
          "the lists aren't very similar. Maybe you can help The\r\n"
          "Historians reconcile their lists?\r\n",
-     .run = NULL});
+     .run = run});
+
+static void run(char* input) { printf("Received %s\r\n", input); }

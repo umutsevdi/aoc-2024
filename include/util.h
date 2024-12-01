@@ -16,17 +16,16 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define WARN(CODE)                                                             \
-    fprintf(stderr, "WARN  | %17s %s#%s():%-4d - " #CODE "\r\n", __now(), __FILE__,    \
-            __PRETTY_FUNCTION__, __LINE__)
-#define INFO(CODE)                                                             \
-    (printf("INFO  | %17s %s#%s():%-4d - " #CODE "\r\n", __now(), __FILE__,            \
-            __PRETTY_FUNCTION__, __LINE__),                                    \
-     CODE)
+#define INFO(CODE, ...)                                                        \
+    printf("INFO  | %17s %s#%s():%-4d - " CODE "\r\n", __now(), __FILE__,      \
+           __PRETTY_FUNCTION__, __LINE__ __VA_ARGS__)
 
+#define WARN(CODE)                                                             \
+    fprintf(stderr, "WARN  | %17s %s#%s():%-4d - " CODE "\r\n", __now(),       \
+            __FILE__, __PRETTY_FUNCTION__, __LINE__ __VA_ARGS__)
 #define ERROR(CODE)                                                            \
-    (fprintf(stderr, "ERROR | %17s %s#%s():%-4d - " #CODE "\r\n", __now(), __FILE__,   \
-             __PRETTY_FUNCTION__, __LINE__),                                   \
+    (fprintf(stderr, "ERROR | %17s %s#%s():%-4d - " #CODE "\r\n", __now(),     \
+             __FILE__, __PRETTY_FUNCTION__, __LINE__),                         \
      CODE)
 
 /* Current date time in string */

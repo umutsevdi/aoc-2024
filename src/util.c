@@ -1,13 +1,11 @@
 #include "util.h"
 #include <time.h>
 
-static time_t _now;
 static struct tm* _tm;
-
-void start() { _now = time(0); }
 
 const char* __now()
 {
+    static time_t _now = {0};
     time(&_now);
     _tm = localtime(&_now);
     static char string[20];
@@ -19,6 +17,7 @@ const char* __now()
 
 bool cmparg(const char* l_opt, const char* s_opt, const char* arg)
 {
+    if (l_opt == NULL || s_opt == NULL || arg == NULL) { return false; }
     int l_opt_len = strlen(l_opt);
     int s_opt_len = strlen(s_opt);
     return strncmp(s_opt, arg, s_opt_len) == 0
@@ -27,5 +26,6 @@ bool cmparg(const char* l_opt, const char* s_opt, const char* arg)
 
 bool cmparg_s(const char* opt, const char* arg)
 {
+    if (opt == NULL || arg == NULL) { return false; }
     return strncmp(opt, arg, strlen(opt)) == 0;
 }
