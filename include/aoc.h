@@ -10,23 +10,22 @@
  * License: MIT License
  ******************************************************************************/
 #include "cli.h"
-/// An interface for any Advent of Code problem
+/** An interface for any Advent of Code problem */
 typedef struct aoc_solution_t {
-    char* cmd;              /// Command to execute the given advent of code
-    const char* description;/// Description of the problem
+    char* cmd /** Command to execute the given advent of code */;
+    const char* description /** Description of the problem */;
     enum aoc_code_t (*run)(
-        CliInput* input);/// Function to execute, NULL if the question
-                         /// is not finished yet
+        CliInput* input) /** Function to execute, NULL if unfinished */;
 } Solution;
 
 #define SOLUTION_SIZE 25
-/// Shared solution array
+/** Shared solution array */
 extern Solution* solutions[SOLUTION_SIZE];
 
-/// Define a solution for given day.
+/** Define a solution for given day. */
 #define SOLUTION(DAY, ...)                                                     \
     Solution DAY_##DAY##_impl = (Solution)__VA_ARGS__;                         \
     struct aoc_solution_t* AOC_DAY_##DAY = &DAY_##DAY##_impl
 
-/// Links the remaining solutions.
+/** Links the remaining solutions. */
 void setup_solution_list();

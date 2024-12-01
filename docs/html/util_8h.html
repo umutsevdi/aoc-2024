@@ -178,7 +178,7 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="#a88b53f82662054ffc8f123a7ffee7ed5a5e34561075ef24ae852b04ecce049e4b">AOC_NO_SUCH_QUESTION</a>
 , <a class="el" href="#a88b53f82662054ffc8f123a7ffee7ed5aadd0d751b8c512ec82014a34a530b955">AOC_OUT_OF_BOUNDS</a>
-, <a class="el" href="#a88b53f82662054ffc8f123a7ffee7ed5adf4b56de54d52f5a0e64f5a61b46aee1">AOC_SOLUTION_NOT_COMPLETE</a>
+, <a class="el" href="#a88b53f82662054ffc8f123a7ffee7ed5a6fc088261778a46e48479a91f4b194ad">AOC_SOLUTION_UNFINISHED</a>
 , <a class="el" href="#a88b53f82662054ffc8f123a7ffee7ed5a48c881a7283ed744b1df107b35d1f378">AOC_FILE_NOT_FOUND</a>
 , <br />
 &#160;&#160;<a class="el" href="#a88b53f82662054ffc8f123a7ffee7ed5ad46a41c338aef0e3c3c028627954be03">AOC_NOT_A_FILE</a>
@@ -282,29 +282,30 @@ Functions</h2></td></tr>
 <p>File: <a class="el" href="util_8h.html">include/util.h</a> Created: 12/01/24 Author: Umut Sevdi Description: Utility library. </p>
 <p>Project: umutsevdi/aoc-2024 License: MIT License Error codes of the program </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a08c0593463b66eec10c4268b2fe5b5db" name="a88b53f82662054ffc8f123a7ffee7ed5a08c0593463b66eec10c4268b2fe5b5db"></a>AOC_OK&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a16f155c72f099092ecb9b2e26fecbc0b" name="a88b53f82662054ffc8f123a7ffee7ed5a16f155c72f099092ecb9b2e26fecbc0b"></a>ADC_UNKNOWN_OPTION&#160;</td><td class="fielddoc"><p>Process completed successfully. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a08c0593463b66eec10c4268b2fe5b5db" name="a88b53f82662054ffc8f123a7ffee7ed5a08c0593463b66eec10c4268b2fe5b5db"></a>AOC_OK&#160;</td><td class="fielddoc"><p>Process completed successfully. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5aae78ffd50a3120deb4093ff03d6f956a" name="a88b53f82662054ffc8f123a7ffee7ed5aae78ffd50a3120deb4093ff03d6f956a"></a>AOC_NO_QUESTION_PROVIDED&#160;</td><td class="fielddoc"><p>Given CLI option is invalid. </p>
+<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a16f155c72f099092ecb9b2e26fecbc0b" name="a88b53f82662054ffc8f123a7ffee7ed5a16f155c72f099092ecb9b2e26fecbc0b"></a>ADC_UNKNOWN_OPTION&#160;</td><td class="fielddoc"><p>Given CLI option is invalid. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a4737baa9a9d3a86fca833afcaf154815" name="a88b53f82662054ffc8f123a7ffee7ed5a4737baa9a9d3a86fca833afcaf154815"></a>AOC_SOLUTION_ID_PARSE&#160;</td><td class="fielddoc"><p>No question provided to query. </p>
+<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5aae78ffd50a3120deb4093ff03d6f956a" name="a88b53f82662054ffc8f123a7ffee7ed5aae78ffd50a3120deb4093ff03d6f956a"></a>AOC_NO_QUESTION_PROVIDED&#160;</td><td class="fielddoc"><p>No question provided to query. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a5e34561075ef24ae852b04ecce049e4b" name="a88b53f82662054ffc8f123a7ffee7ed5a5e34561075ef24ae852b04ecce049e4b"></a>AOC_NO_SUCH_QUESTION&#160;</td><td class="fielddoc"><p>Invalid question number. </p>
+<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a4737baa9a9d3a86fca833afcaf154815" name="a88b53f82662054ffc8f123a7ffee7ed5a4737baa9a9d3a86fca833afcaf154815"></a>AOC_SOLUTION_ID_PARSE&#160;</td><td class="fielddoc"><p>Invalid question number. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5aadd0d751b8c512ec82014a34a530b955" name="a88b53f82662054ffc8f123a7ffee7ed5aadd0d751b8c512ec82014a34a530b955"></a>AOC_OUT_OF_BOUNDS&#160;</td><td class="fielddoc"><p>No such question. </p>
+<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a5e34561075ef24ae852b04ecce049e4b" name="a88b53f82662054ffc8f123a7ffee7ed5a5e34561075ef24ae852b04ecce049e4b"></a>AOC_NO_SUCH_QUESTION&#160;</td><td class="fielddoc"><p>No such question. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5adf4b56de54d52f5a0e64f5a61b46aee1" name="a88b53f82662054ffc8f123a7ffee7ed5adf4b56de54d52f5a0e64f5a61b46aee1"></a>AOC_SOLUTION_NOT_COMPLETE&#160;</td><td class="fielddoc"><p>Provided id is out of bounds. </p>
+<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5aadd0d751b8c512ec82014a34a530b955" name="a88b53f82662054ffc8f123a7ffee7ed5aadd0d751b8c512ec82014a34a530b955"></a>AOC_OUT_OF_BOUNDS&#160;</td><td class="fielddoc"><p>Provided id is out of bounds. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a48c881a7283ed744b1df107b35d1f378" name="a88b53f82662054ffc8f123a7ffee7ed5a48c881a7283ed744b1df107b35d1f378"></a>AOC_FILE_NOT_FOUND&#160;</td><td class="fielddoc"><p>Solution is not yet completed for the question. </p>
+<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a6fc088261778a46e48479a91f4b194ad" name="a88b53f82662054ffc8f123a7ffee7ed5a6fc088261778a46e48479a91f4b194ad"></a>AOC_SOLUTION_UNFINISHED&#160;</td><td class="fielddoc"><p>Solution is not yet completed <br  />
+ </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5ad46a41c338aef0e3c3c028627954be03" name="a88b53f82662054ffc8f123a7ffee7ed5ad46a41c338aef0e3c3c028627954be03"></a>AOC_NOT_A_FILE&#160;</td><td class="fielddoc"><p>No such file or directory. </p>
+<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a48c881a7283ed744b1df107b35d1f378" name="a88b53f82662054ffc8f123a7ffee7ed5a48c881a7283ed744b1df107b35d1f378"></a>AOC_FILE_NOT_FOUND&#160;</td><td class="fielddoc"><p>No such file or directory. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a561c10c0cfbb9de31b32aaef73f47cb8" name="a88b53f82662054ffc8f123a7ffee7ed5a561c10c0cfbb9de31b32aaef73f47cb8"></a>AOC_PIPE_FAILED&#160;</td><td class="fielddoc"><p>Expected a file, found a directory. </p>
+<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5ad46a41c338aef0e3c3c028627954be03" name="a88b53f82662054ffc8f123a7ffee7ed5ad46a41c338aef0e3c3c028627954be03"></a>AOC_NOT_A_FILE&#160;</td><td class="fielddoc"><p>Expected a file, found a directory. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a252eefa0c7a351909f15749509c199f7" name="a88b53f82662054ffc8f123a7ffee7ed5a252eefa0c7a351909f15749509c199f7"></a>AOC_NO_INPUT&#160;</td><td class="fielddoc"><p>Error during allocation. </p>
+<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a561c10c0cfbb9de31b32aaef73f47cb8" name="a88b53f82662054ffc8f123a7ffee7ed5a561c10c0cfbb9de31b32aaef73f47cb8"></a>AOC_PIPE_FAILED&#160;</td><td class="fielddoc"><p>Error during allocation. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a24fdaccbcd2f7086ab1dfc3b742c0cdc" name="a88b53f82662054ffc8f123a7ffee7ed5a24fdaccbcd2f7086ab1dfc3b742c0cdc"></a>AOC_ERR_END&#160;</td><td class="fielddoc"><p>No input provided. </p>
-<p>Error size, invalid error type </p>
+<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a252eefa0c7a351909f15749509c199f7" name="a88b53f82662054ffc8f123a7ffee7ed5a252eefa0c7a351909f15749509c199f7"></a>AOC_NO_INPUT&#160;</td><td class="fielddoc"><p>No input provided. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a88b53f82662054ffc8f123a7ffee7ed5a24fdaccbcd2f7086ab1dfc3b742c0cdc" name="a88b53f82662054ffc8f123a7ffee7ed5a24fdaccbcd2f7086ab1dfc3b742c0cdc"></a>AOC_ERR_END&#160;</td><td class="fielddoc"><p>Error size, invalid error type. </p>
 </td></tr>
 </table>
 

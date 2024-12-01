@@ -16,21 +16,21 @@
 #include <stdlib.h>
 #include <string.h>
 
-/// Error codes of the program
+/** Error codes of the program */
 enum aoc_code_t {
-    AOC_OK,                   /// Process completed successfully.
-    ADC_UNKNOWN_OPTION,       /// Given CLI option is invalid.
-    AOC_NO_QUESTION_PROVIDED, /// No question provided to query.
-    AOC_SOLUTION_ID_PARSE,    /// Invalid question number.
-    AOC_NO_SUCH_QUESTION,     /// No such question.
-    AOC_OUT_OF_BOUNDS,        /// Provided id is out of bounds
-    AOC_SOLUTION_NOT_COMPLETE,/// Solution is not yet completed for the question
-    AOC_FILE_NOT_FOUND,       /// No such file or directory.
-    AOC_NOT_A_FILE,           /// Expected a file, found a directory.
-    AOC_PIPE_FAILED,          /// Error during allocation.
-    AOC_NO_INPUT,             /// No input provided
+    AOC_OK /** Process completed successfully. */,
+    ADC_UNKNOWN_OPTION /** Given CLI option is invalid.*/,
+    AOC_NO_QUESTION_PROVIDED /** No question provided to query.*/,
+    AOC_SOLUTION_ID_PARSE /** Invalid question number.*/,
+    AOC_NO_SUCH_QUESTION /** No such question.*/,
+    AOC_OUT_OF_BOUNDS /** Provided id is out of bounds*/,
+    AOC_SOLUTION_UNFINISHED /** Solution is not yet completed  */,
+    AOC_FILE_NOT_FOUND /** No such file or directory.*/,
+    AOC_NOT_A_FILE /** Expected a file, found a directory.*/,
+    AOC_PIPE_FAILED /** Error during allocation.*/,
+    AOC_NO_INPUT /** No input provided*/,
 
-    AOC_ERR_END/// Error size, invalid error type
+    AOC_ERR_END /** Error size, invalid error type*/,
 };
 
 #define INFO(CODE, ...)                                                        \
@@ -45,10 +45,10 @@ enum aoc_code_t {
              __FILE__, __PRETTY_FUNCTION__, __LINE__),                         \
      CODE)
 
-/// Current date time in string
+/** Current date time in string */
 const char* __now();
 
-/// Swap values of two long
+/** Swap values of two long */
 void swapl(long* a, long* b);
 
 /**

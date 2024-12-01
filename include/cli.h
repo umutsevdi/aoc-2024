@@ -12,11 +12,11 @@
 
 #include "util.h"
 
-/// Processed CLI Input
+/** Processed CLI Input */
 typedef struct {
     char* data;
     size_t size;
-    size_t _cursor;///Needed for internal use
+    size_t _cursor /**Needed for internal use */;
 } CliInput;
 
 /**

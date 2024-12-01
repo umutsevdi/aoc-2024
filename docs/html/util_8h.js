@@ -10,7 +10,7 @@ var util_8h =
       [ "AOC_SOLUTION_ID_PARSE", "util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5a4737baa9a9d3a86fca833afcaf154815", null ],
       [ "AOC_NO_SUCH_QUESTION", "util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5a5e34561075ef24ae852b04ecce049e4b", null ],
       [ "AOC_OUT_OF_BOUNDS", "util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5aadd0d751b8c512ec82014a34a530b955", null ],
-      [ "AOC_SOLUTION_NOT_COMPLETE", "util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5adf4b56de54d52f5a0e64f5a61b46aee1", null ],
+      [ "AOC_SOLUTION_UNFINISHED", "util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5a6fc088261778a46e48479a91f4b194ad", null ],
       [ "AOC_FILE_NOT_FOUND", "util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5a48c881a7283ed744b1df107b35d1f378", null ],
       [ "AOC_NOT_A_FILE", "util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5ad46a41c338aef0e3c3c028627954be03", null ],
       [ "AOC_PIPE_FAILED", "util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5a561c10c0cfbb9de31b32aaef73f47cb8", null ],

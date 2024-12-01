@@ -59,7 +59,7 @@ int main(int argc, char* argv[])
         if (errno == ERANGE) { return ERROR(AOC_SOLUTION_ID_PARSE); }
         if (id < 1 || id > SOLUTION_SIZE) { return ERROR(AOC_OUT_OF_BOUNDS); }
         if (solutions[id - 1]->run == NULL) {
-            return ERROR(AOC_SOLUTION_NOT_COMPLETE);
+            return ERROR(AOC_SOLUTION_UNFINISHED);
         }
         enum aoc_code_t input_result = read_input(argv[3], &input);
         if (!input_result) { return solutions[id - 1]->run(&input); }
