@@ -3,6 +3,14 @@
 #include <sys/stat.h>
 #include <unistd.h>
 
+/**
+ * Select a file descriptor based on argument.
+ * @param arg - to pick.
+ * @returns a file descriptor or NULL
+ *  - FILE* if file is valid and readable
+ *  - NULL if AOC_FILE_NOT_FOUND | AOC_NOT_A_FILE
+ *  - If no input is provided: stdin
+ */
 static FILE* pickfd(char* arg)
 {
     FILE* file;
@@ -36,7 +44,7 @@ enum aoc_code_t read_input(char* arg, CliInput* pipe)
     size_t buffer_len = 0;
     while (fgets(buffer, sizeof(buffer), file)) {
         buffer_len = strnlen(buffer, sizeof(buffer));
-        if (pipe->cursor + buffer_len > pipe->size) {
+        if (pipe->_cursor + buffer_len > pipe->size) {
             tmp = realloc(pipe->data, pipe->size * 2);
             if (tmp == NULL) {
                 if (file != stdin) { fclose(file); }
@@ -46,9 +54,9 @@ enum aoc_code_t read_input(char* arg, CliInput* pipe)
             pipe->data = tmp;
             pipe->size *= 2;
         };
-        memcpy(pipe->data + pipe->cursor, buffer, buffer_len);
-        pipe->cursor += buffer_len;
-        pipe->data[pipe->cursor] = '\0';
+        memcpy(pipe->data + pipe->_cursor, buffer, buffer_len);
+        pipe->_cursor += buffer_len;
+        pipe->data[pipe->_cursor] = '\0';
     }
     if (strnlen(pipe->data, pipe->size) == 0) {
         if (file != stdin) { fclose(file); }

@@ -51,7 +51,7 @@ SHOW_INCLUDE_FILES     = YES
 CALL_GRAPH             = YES
 
 # Enable the dot tool for generating graphs
-HAVE_DOT               = NO
+HAVE_DOT               = YES
 DOT_GRAPH_MAX_NODES    = 50
 DOT_TRANSPARENT        = NO
 DOT_MULTI_TARGETS      = NO

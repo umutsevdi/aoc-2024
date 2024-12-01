@@ -12,10 +12,11 @@
 
 #include "util.h"
 
+/* Processed CLI Input*/
 typedef struct {
     char* data;
     size_t size;
-    size_t cursor;
+    size_t _cursor; /* Needed for internal use */
 } CliInput;
 
 /**
@@ -48,6 +49,8 @@ bool cmparg(const char* opt, const char* arg);
  * @param pipe - empty pipe object to fill.
  *
  * @returns error code.
- *      - AOC_PIPE_FAILED : on allocation errors
+ *      - AOC_PIPE_FAILED
+ *      - AOC_FILE_NOT_FOUND
+ *      - AOC_NOT_A_FILE
  */
 enum aoc_code_t read_input(char* arg, CliInput* pipe);
