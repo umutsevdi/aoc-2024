@@ -10,13 +10,14 @@ OUTPUT_DIRECTORY       = docs/
 # Input directories
 INPUT                  = src/ include/ ./README.md
 BRIEF_MEMBER_DESC      = YES
-REPEAT_BRIEF           = YES
+REPEAT_BRIEF           = NO
 JAVADOC_AUTOBRIEF      = YES
 CPP_AUTOBRIEF          = YES
 JAVADOC_BANNER         = YES
 BUILTIN_STL_SUPPORT    = NO
 EXTRACT_STATIC         = YES
 EXTRACT_LOCAL_METHODS  = YES
+EXTRACT_PRIVATE        = YES
 # Patterns to ignore
 EXCLUDE_PATTERNS      = 
 

@@ -12,10 +12,12 @@
 #include "cli.h"
 /** An interface for any Advent of Code problem */
 typedef struct aoc_solution_t {
-    char* cmd /** Command to execute the given advent of code */;
-    const char* description /** Description of the problem */;
-    enum aoc_code_t (*run)(
-        CliInput* input) /** Function to execute, NULL if unfinished */;
+    /** Command to execute the given advent of code */
+    char* cmd;
+    /** Description of the problem */
+    const char* description;
+    /** Function to execute, NULL if unfinished */
+    enum aoc_code_t (*run)(CliInput* input);
 } Solution;
 
 #define SOLUTION_SIZE 25
