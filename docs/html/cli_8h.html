@@ -105,14 +105,17 @@ $(function(){initNavTree('cli_8h.html',''); initResizable(true); });
   <div class="headertitle"><div class="title">cli.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>File: <a class="el" href="cli_8h.html" title="File: include/cli.h Created: 12/01/24 Author: Umut Sevdi Description: IO Parser utils.">include/cli.h</a> Created: 12/01/24 Author: Umut Sevdi Description: IO Parser utils.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="util_8h_source.html">util.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for cli.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="cli_8h__incl.png" border="0" usemap="#acli_8h" alt=""/></div>
 <map name="acli_8h" id="acli_8h">
-<area shape="rect" title=" " alt="" coords="214,5,262,33"/>
-<area shape="rect" href="util_8h.html" title=" " alt="" coords="211,81,265,109"/>
+<area shape="rect" title="File: include/cli.h Created: 12/01/24 Author: Umut Sevdi Description: IO Parser utils." alt="" coords="214,5,262,33"/>
+<area shape="rect" href="util_8h.html" title="File: include/util.h Created: 12/01/24 Author: Umut Sevdi Description: Utility library." alt="" coords="211,81,265,109"/>
 <area shape="poly" title=" " alt="" coords="241,34,241,65,235,65,235,34"/>
 <area shape="rect" title=" " alt="" coords="5,157,87,184"/>
 <area shape="poly" title=" " alt="" coords="211,109,95,153,94,148,210,104"/>
@@ -131,8 +134,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="cli_8h__dep__incl.png" border="0" usemap="#acli_8hdep" alt=""/></div>
 <map name="acli_8hdep" id="acli_8hdep">
-<area shape="rect" title=" " alt="" coords="142,5,190,33"/>
-<area shape="rect" href="aoc_8h.html" title=" " alt="" coords="106,81,162,109"/>
+<area shape="rect" title="File: include/cli.h Created: 12/01/24 Author: Umut Sevdi Description: IO Parser utils." alt="" coords="142,5,190,33"/>
+<area shape="rect" href="aoc_8h.html" title="File: include/aoc.h Created: 12/01/24 Author: Umut Sevdi Description: Advent of Code 2024 Solutions." alt="" coords="106,81,162,109"/>
 <area shape="poly" title=" " alt="" coords="157,48,142,82,137,79,152,46"/>
 <area shape="rect" href="main_8c.html" title=" " alt="" coords="5,157,71,184"/>
 <area shape="poly" title=" " alt="" coords="137,45,96,83,67,123,47,158,42,155,63,120,92,79,134,41"/>
@@ -152,7 +155,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCliInput.html">CliInput</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">File: <a class="el" href="cli_8h.html">include/cli.h</a> Created: 12/01/24 Author: Umut Sevdi Description: IO Parser utils.  <a href="structCliInput.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processed CLI Input.  <a href="structCliInput.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -167,7 +170,10 @@ Functions</h2></td></tr>
 <tr class="memdesc:a41fea767940b2e7c40f838095b4f0d68"><td class="mdescLeft">&#160;</td><td class="mdescRight">If a file name is present in argument, reads input from it.  <br /></td></tr>
 <tr class="separator:a41fea767940b2e7c40f838095b4f0d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>File: <a class="el" href="cli_8h.html" title="File: include/cli.h Created: 12/01/24 Author: Umut Sevdi Description: IO Parser utils.">include/cli.h</a> Created: 12/01/24 Author: Umut Sevdi Description: IO Parser utils. </p>
+<p>Project: umutsevdi/aoc-2024 License: MIT License </p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="acf8026c5ca0afdb61826fec812ff076c" name="acf8026c5ca0afdb61826fec812ff076c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acf8026c5ca0afdb61826fec812ff076c">&#9670;&#160;</a></span>cmparg()</h2>
 
@@ -186,6 +192,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Compares the given argument with a single NULL terminated string. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">opt</td><td>- NULL terminated long command. Example: &ndash;help </td></tr>
@@ -220,6 +228,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Compares the given argument with <em>two NULL terminated strings</em>, Short and long versions. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">l_opt</td><td>- NULL terminated long command. Example: &ndash;help </td></tr>
@@ -250,6 +260,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>If a file name is present in argument, reads input from it. </p>
 <p>If not falls back to stdin.</p>
 <p>Writes its contents to the Input.</p>
 <dl class="params"><dt>Parameters</dt><dd>

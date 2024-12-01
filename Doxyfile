@@ -10,7 +10,7 @@ OUTPUT_DIRECTORY       = docs/
 # Input directories
 INPUT                  = src/ include/ ./README.md
 BRIEF_MEMBER_DESC      = YES
-REPEAT_BRIEF           = NO
+REPEAT_BRIEF           = YES
 JAVADOC_AUTOBRIEF      = YES
 CPP_AUTOBRIEF          = YES
 JAVADOC_BANNER         = YES

@@ -1,6 +1,6 @@
 #pragma once
 /*******************************************************************************
- *
+ * \file
  * File: include/aoc.h
  * Created: 12/01/24
  * Author: Umut Sevdi
@@ -10,6 +10,7 @@
  * License: MIT License
  ******************************************************************************/
 #include "cli.h"
+
 /** An interface for any Advent of Code problem */
 typedef struct aoc_solution_t {
     /** Command to execute the given advent of code */
@@ -21,6 +22,7 @@ typedef struct aoc_solution_t {
 } Solution;
 
 #define SOLUTION_SIZE 25
+
 /** Shared solution array */
 extern Solution* solutions[SOLUTION_SIZE];
 

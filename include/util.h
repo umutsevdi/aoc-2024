@@ -1,6 +1,6 @@
 #pragma once
 /*******************************************************************************
- *
+ * \file
  * File: include/util.h
  * Created: 12/01/24
  * Author: Umut Sevdi

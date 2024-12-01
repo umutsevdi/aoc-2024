@@ -114,9 +114,9 @@ Include dependency graph for parser.c:</div>
 <div class="center"><img src="parser_8c__incl.png" border="0" usemap="#aparser_8c" alt=""/></div>
 <map name="aparser_8c" id="aparser_8c">
 <area shape="rect" title=" " alt="" coords="272,5,345,33"/>
-<area shape="rect" href="cli_8h.html" title=" " alt="" coords="183,81,232,109"/>
+<area shape="rect" href="cli_8h.html" title="File: include/cli.h Created: 12/01/24 Author: Umut Sevdi Description: IO Parser utils." alt="" coords="183,81,232,109"/>
 <area shape="poly" title=" " alt="" coords="292,36,239,74,236,70,289,31"/>
-<area shape="rect" href="util_8h.html" title=" " alt="" coords="211,157,265,184"/>
+<area shape="rect" href="util_8h.html" title="File: include/util.h Created: 12/01/24 Author: Umut Sevdi Description: Utility library." alt="" coords="211,157,265,184"/>
 <area shape="poly" title=" " alt="" coords="305,34,253,144,248,141,300,32"/>
 <area shape="rect" title=" " alt="" coords="306,81,391,109"/>
 <area shape="poly" title=" " alt="" coords="318,32,337,66,332,69,313,35"/>
@@ -170,6 +170,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Compares the given argument with a single NULL terminated string. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">opt</td><td>- NULL terminated long command. Example: &ndash;help </td></tr>
@@ -204,6 +206,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Compares the given argument with <em>two NULL terminated strings</em>, Short and long versions. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">l_opt</td><td>- NULL terminated long command. Example: &ndash;help </td></tr>
@@ -238,6 +242,8 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Select a file descriptor based on argument. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">arg</td><td>- to pick. </td></tr>
@@ -271,6 +277,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>If a file name is present in argument, reads input from it. </p>
 <p>If not falls back to stdin.</p>
 <p>Writes its contents to the Input.</p>
 <dl class="params"><dt>Parameters</dt><dd>
