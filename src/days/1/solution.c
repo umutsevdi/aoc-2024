@@ -52,8 +52,17 @@ SOLUTION(
          "Historians reconcile their lists?\r\n",
      .run = run});
 
-static enum aoc_code_t parse_args(const CliInput* input, long* tokens,
-                                  size_t token_max_size, size_t* token_len)
+/**
+ * Parse the CLI input into list of Long numbers
+ * @param input - to parse
+ * @param tokenlist - long numbers to insert into
+ * @param tokenlist_s - length of the token array
+ * @param tokenlist_len - actual length of the tokens list
+ *
+ * @returns AOC_OUT_OF_BOUNDS | AOC_SOLUTION_ID_PARSE | AOC_OK
+ */
+static enum aoc_code_t parse_args(const CliInput* input, long* tokenlist,
+                                  size_t tokenlist_s, size_t* tokenlist_len)
 {
     char* token_head = strdup(input->data);
     char* token = token_head;
@@ -61,17 +70,17 @@ static enum aoc_code_t parse_args(const CliInput* input, long* tokens,
     token = strtok_r(token, "\r\n \t", &saveptr);
     while (token != NULL) {
         if (strlen(token) > 0) {
-            if (*token_len >= token_max_size) {
+            if (*tokenlist_len >= tokenlist_s) {
                 free(token_head);
                 return ERROR(AOC_OUT_OF_BOUNDS);
             }
             char* endptr = NULL;
-            tokens[*token_len] = strtol(token, &endptr, 10);
+            tokenlist[*tokenlist_len] = strtol(token, &endptr, 10);
             if (errno == ERANGE) {
                 free(token_head);
                 return ERROR(AOC_SOLUTION_ID_PARSE);
             }
-            (*token_len)++;
+            (*tokenlist_len)++;
         }
         token = strtok_r(NULL, "\r\n \t", &saveptr);
     }
@@ -79,7 +88,13 @@ static enum aoc_code_t parse_args(const CliInput* input, long* tokens,
     return AOC_OK;
 }
 
-static enum aoc_code_t run_part(long* tokens, size_t tokens_len)
+/**
+ * Runs the part one of the question.
+ * @param tokens - list of numbers
+ * @param tokens_len - length of the list
+ *
+ */
+void run_part1(long* tokens, size_t tokens_len)
 {
 
     long* left = malloc(tokens_len / 2 * sizeof(long));
@@ -102,10 +117,9 @@ static enum aoc_code_t run_part(long* tokens, size_t tokens_len)
     INFO("Part 1: %zu", , result);
     free(left);
     free(right);
-    return AOC_OK;
 }
 
-static enum aoc_code_t run_part2(long* tokens, size_t tokens_len)
+void run_part2(long* tokens, size_t tokens_len)
 {
     long* left = malloc(tokens_len / 2 * sizeof(long));
     long* right = malloc(tokens_len / 2 * sizeof(long));
@@ -157,16 +171,16 @@ static enum aoc_code_t run_part2(long* tokens, size_t tokens_len)
     free(left);
     free(right);
     free(occurrence_table);
-    return AOC_OK;
 }
 
 static enum aoc_code_t run(CliInput* argv)
 {
     long tokens[CAPACITY] = {0};
     size_t tokens_len = 0;
-    parse_args(argv, tokens, CAPACITY, &tokens_len);
+    enum aoc_code_t code = parse_args(argv, tokens, CAPACITY, &tokens_len);
+    if (code) { return code; }
 
-    run_part(tokens, tokens_len);
+    run_part1(tokens, tokens_len);
     run_part2(tokens, tokens_len);
     return AOC_OK;
 }
