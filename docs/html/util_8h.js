@@ -1,5 +1,6 @@
 var util_8h =
 [
+    [ "CAPACITY", "util_8h.html#a91fbe6020a4bbd73084f0681b9092479", null ],
     [ "ERROR", "util_8h.html#a5dd66fe6bc5d9d8521929591f7d6290f", null ],
     [ "INFO", "util_8h.html#a91a8f5dd90b4e2ab426f8509d40c3ee0", null ],
     [ "WARN", "util_8h.html#a94cd790143a354b0b41b0d9c426872f2", null ],

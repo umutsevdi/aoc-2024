@@ -16,6 +16,7 @@
 typedef struct {
     char* data;
     size_t size;
+    size_t len;
     /**Needed for internal use */
     size_t _cursor;
 } CliInput;
@@ -55,3 +56,18 @@ bool cmparg(const char* opt, const char* arg);
  *      - AOC_NOT_A_FILE
  */
 enum aoc_code_t read_input(char* arg, CliInput* pipe);
+
+/**
+ * Creates a copy of the input string where it is separated by new lines.
+ * Inserts beginning of each line as indices to the indices array,
+ * while updating the indices size accordingly.
+ *
+ * @param input - to parse
+ * @param input_s - length of the string
+ * @param indices - indices of the beginning of each string
+ * @param indices_s - number of indices
+ *
+ * @returns copy of the original string that contains NULL terminated segments.
+ */
+char* parse_lines(const char* input, const size_t input_s, size_t* indices,
+                  size_t* indices_s);

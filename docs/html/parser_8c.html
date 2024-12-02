@@ -141,15 +141,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a82b602687a3daf86930542f5e4a2620c" id="r_a82b602687a3daf86930542f5e4a2620c"><td class="memItemLeft" align="right" valign="top">static FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82b602687a3daf86930542f5e4a2620c">pickfd</a> (char *arg)</td></tr>
 <tr class="memdesc:a82b602687a3daf86930542f5e4a2620c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select a file descriptor based on argument.  <br /></td></tr>
 <tr class="separator:a82b602687a3daf86930542f5e4a2620c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41fea767940b2e7c40f838095b4f0d68" id="r_a41fea767940b2e7c40f838095b4f0d68"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5">aoc_code_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41fea767940b2e7c40f838095b4f0d68">read_input</a> (char *arg, <a class="el" href="structCliInput.html">CliInput</a> *pipe)</td></tr>
-<tr class="memdesc:a41fea767940b2e7c40f838095b4f0d68"><td class="mdescLeft">&#160;</td><td class="mdescRight">If a file name is present in argument, reads input from it.  <br /></td></tr>
-<tr class="separator:a41fea767940b2e7c40f838095b4f0d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28370101e53fef8c88e2f1aceb563e0b" id="r_a28370101e53fef8c88e2f1aceb563e0b"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5">aoc_code_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28370101e53fef8c88e2f1aceb563e0b">read_input</a> (char *arg, <a class="el" href="structCliInput.html">CliInput</a> *input)</td></tr>
+<tr class="memdesc:a28370101e53fef8c88e2f1aceb563e0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">If a file name is present in argument, reads input from it.  <br /></td></tr>
+<tr class="separator:a28370101e53fef8c88e2f1aceb563e0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c895798d9333b89f0d4aa092566699a" id="r_a4c895798d9333b89f0d4aa092566699a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c895798d9333b89f0d4aa092566699a">cmpargs</a> (const char *l_opt, const char *s_opt, const char *arg)</td></tr>
 <tr class="memdesc:a4c895798d9333b89f0d4aa092566699a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares the given argument with <em>two NULL terminated strings</em>, Short and long versions.  <br /></td></tr>
 <tr class="separator:a4c895798d9333b89f0d4aa092566699a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf8026c5ca0afdb61826fec812ff076c" id="r_acf8026c5ca0afdb61826fec812ff076c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf8026c5ca0afdb61826fec812ff076c">cmparg</a> (const char *opt, const char *arg)</td></tr>
 <tr class="memdesc:acf8026c5ca0afdb61826fec812ff076c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares the given argument with a single NULL terminated string.  <br /></td></tr>
 <tr class="separator:acf8026c5ca0afdb61826fec812ff076c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41754599640511fc72dee05ad2a04695" id="r_a41754599640511fc72dee05ad2a04695"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41754599640511fc72dee05ad2a04695">parse_lines</a> (const char *input, const size_t input_s, size_t *indices, size_t *indices_s)</td></tr>
+<tr class="memdesc:a41754599640511fc72dee05ad2a04695"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a copy of the input string where it is separated by new lines.  <br /></td></tr>
+<tr class="separator:a41754599640511fc72dee05ad2a04695"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="acf8026c5ca0afdb61826fec812ff076c" name="acf8026c5ca0afdb61826fec812ff076c"></a>
@@ -220,6 +223,50 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a41754599640511fc72dee05ad2a04695" name="a41754599640511fc72dee05ad2a04695"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41754599640511fc72dee05ad2a04695">&#9670;&#160;</a></span>parse_lines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * parse_lines </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>input</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const size_t</td>          <td class="paramname"><span class="paramname"><em>input_s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>indices</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>indices_s</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a copy of the input string where it is separated by new lines. </p>
+<p>Inserts beginning of each line as indices to the indices array, while updating the indices size accordingly.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>- to parse </td></tr>
+    <tr><td class="paramname">input_s</td><td>- length of the string </td></tr>
+    <tr><td class="paramname">indices</td><td>- indices of the beginning of each string </td></tr>
+    <tr><td class="paramname">indices_s</td><td>- number of indices</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>copy of the original string that contains NULL terminated segments. </dd></dl>
+
+</div>
+</div>
 <a id="a82b602687a3daf86930542f5e4a2620c" name="a82b602687a3daf86930542f5e4a2620c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a82b602687a3daf86930542f5e4a2620c">&#9670;&#160;</a></span>pickfd()</h2>
 
@@ -259,8 +306,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a41fea767940b2e7c40f838095b4f0d68" name="a41fea767940b2e7c40f838095b4f0d68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41fea767940b2e7c40f838095b4f0d68">&#9670;&#160;</a></span>read_input()</h2>
+<a id="a28370101e53fef8c88e2f1aceb563e0b" name="a28370101e53fef8c88e2f1aceb563e0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28370101e53fef8c88e2f1aceb563e0b">&#9670;&#160;</a></span>read_input()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -297,8 +344,8 @@ Functions</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="parser_8c_a41fea767940b2e7c40f838095b4f0d68_cgraph.png" border="0" usemap="#aparser_8c_a41fea767940b2e7c40f838095b4f0d68_cgraph" alt=""/></div>
-<map name="aparser_8c_a41fea767940b2e7c40f838095b4f0d68_cgraph" id="aparser_8c_a41fea767940b2e7c40f838095b4f0d68_cgraph">
+<div class="center"><img src="parser_8c_a28370101e53fef8c88e2f1aceb563e0b_cgraph.png" border="0" usemap="#aparser_8c_a28370101e53fef8c88e2f1aceb563e0b_cgraph" alt=""/></div>
+<map name="aparser_8c_a28370101e53fef8c88e2f1aceb563e0b_cgraph" id="aparser_8c_a28370101e53fef8c88e2f1aceb563e0b_cgraph">
 <area shape="rect" title="If a file name is present in argument, reads input from it." alt="" coords="5,5,96,33"/>
 <area shape="rect" href="parser_8c.html#a82b602687a3daf86930542f5e4a2620c" title="Select a file descriptor based on argument." alt="" coords="144,5,205,33"/>
 <area shape="poly" title=" " alt="" coords="96,16,128,16,128,22,96,22"/>

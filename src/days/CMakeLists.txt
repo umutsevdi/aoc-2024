@@ -1,4 +1,4 @@
-file(GLOB_RECURSE DAY_SOLUTIONS "*/solution.c")
+file(GLOB_RECURSE DAY_SOLUTIONS "*.c")
 
 include_directories(../../include)
-add_library(aoc-days default.c ${DAY_SOLUTIONS})
+add_library(aoc-days ${DAY_SOLUTIONS})

@@ -15,6 +15,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define CAPACITY 4096
 
 /** Error codes of the program */
 enum aoc_code_t {
