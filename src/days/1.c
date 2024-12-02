@@ -40,13 +40,6 @@ static enum aoc_code_t parse_args(const CliInput* input, long* tokenlist,
     return AOC_OK;
 }
 
-/**
- * Runs the part one of the question.
- * @param left - left array
- * @param right - right array
- * @param tokens_len - length of the list
- *
- */
 static void run_part1(long* left, long* right, size_t tokens_len)
 {
     long result = 0;
@@ -58,42 +51,15 @@ static void run_part1(long* left, long* right, size_t tokens_len)
 
 static void run_part2(long* left, long* right, size_t tokens_len)
 {
-    /* an array that contains how many times given value occurred. 
-    * Only fills the first instances. For example:
-    *   occurrence array of 1 3 3 3 2 5 would be 
-    *                       0 2 0 0 0 0
-    *   Excludes first case so, you must add +1 later
-    */
-    long* occurrence_table = calloc(tokens_len, sizeof(long));
-    /* A table that stores where items on the right was seen for the first time.
-     * For the previous array of 1 3 3 3 2 5
-     * The array would be
-     * 0 1 4 5
-     * Use the following indirect address to resolve occurrence table
-     *
-     */
-    size_t unique_index_table[CAPACITY] = {0};
-    size_t unique_index_table_len = 1;
-    for (size_t i = 1; i < tokens_len; i++) {
-        if (right[i] == right[unique_index_table[unique_index_table_len - 1]]) {
-            occurrence_table[unique_index_table[unique_index_table_len - 1]]++;
-        } else {
-            unique_index_table[unique_index_table_len] = i;
-            unique_index_table_len++;
-        }
-    }
     size_t result = 0;
-
-    for (size_t i = 0; i < unique_index_table_len; i++) {
+    for (size_t i = 0; i < tokens_len; i++) {
+        size_t occurrence = 0;
         for (size_t j = 0; j < tokens_len; j++) {
-            if (right[unique_index_table[i]] == left[j]) {
-                result +=
-                    left[j] * (occurrence_table[unique_index_table[i]] + 1);
-            }
+            if (left[i] == right[j]) { occurrence++; }
         }
+        result += occurrence * left[i];
     }
     INFO("Part 2: %zu", , result);
-    free(occurrence_table);
 }
 
 static enum aoc_code_t run(CliInput* argv)
