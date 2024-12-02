@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['2024_0',['aoc-2024',['../md_README.html',1,'']]]
+  ['1_2fsolution_2ec_0',['solution.c',['../1_2solution_8c.html',1,'']]]
 ];

@@ -79,7 +79,7 @@ static enum aoc_code_t parse_args(const CliInput* input, long* tokens,
     return AOC_OK;
 }
 
-static enum aoc_code_t run_part1(long* tokens, size_t tokens_len)
+static enum aoc_code_t run_part(long* tokens, size_t tokens_len)
 {
 
     long* left = malloc(tokens_len / 2 * sizeof(long));
@@ -166,7 +166,7 @@ static enum aoc_code_t run(CliInput* argv)
     size_t tokens_len = 0;
     parse_args(argv, tokens, CAPACITY, &tokens_len);
 
-    run_part1(tokens, tokens_len);
+    run_part(tokens, tokens_len);
     run_part2(tokens, tokens_len);
     return AOC_OK;
 }

@@ -80,3 +80,4 @@ bool cmparg(const char* opt, const char* arg)
     if (opt == NULL || arg == NULL) { return false; }
     return strncmp(opt, arg, strlen(opt)) == 0;
 }
+

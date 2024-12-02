@@ -1,34 +1,33 @@
 #include <aoc.h>
-struct aoc_solution_t;
-struct aoc_solution_t* solutions[SOLUTION_SIZE];
+Solution* solutions[SOLUTION_SIZE];
 /******************************************************************************
                                 BEGIN GENERATED
 *****************************************************************************/
-extern struct aoc_solution_t* AOC_DAY_1;
-extern struct aoc_solution_t* AOC_DAY_2;
-extern struct aoc_solution_t* AOC_DAY_3;
-extern struct aoc_solution_t* AOC_DAY_4;
-extern struct aoc_solution_t* AOC_DAY_5;
-extern struct aoc_solution_t* AOC_DAY_6;
-extern struct aoc_solution_t* AOC_DAY_7;
-extern struct aoc_solution_t* AOC_DAY_8;
-extern struct aoc_solution_t* AOC_DAY_9;
-extern struct aoc_solution_t* AOC_DAY_10;
-extern struct aoc_solution_t* AOC_DAY_11;
-extern struct aoc_solution_t* AOC_DAY_12;
-extern struct aoc_solution_t* AOC_DAY_13;
-extern struct aoc_solution_t* AOC_DAY_14;
-extern struct aoc_solution_t* AOC_DAY_15;
-extern struct aoc_solution_t* AOC_DAY_16;
-extern struct aoc_solution_t* AOC_DAY_17;
-extern struct aoc_solution_t* AOC_DAY_18;
-extern struct aoc_solution_t* AOC_DAY_19;
-extern struct aoc_solution_t* AOC_DAY_20;
-extern struct aoc_solution_t* AOC_DAY_21;
-extern struct aoc_solution_t* AOC_DAY_22;
-extern struct aoc_solution_t* AOC_DAY_23;
-extern struct aoc_solution_t* AOC_DAY_24;
-extern struct aoc_solution_t* AOC_DAY_25;
+extern Solution* AOC_DAY_1;
+extern Solution* AOC_DAY_2;
+extern Solution* AOC_DAY_3;
+extern Solution* AOC_DAY_4;
+extern Solution* AOC_DAY_5;
+extern Solution* AOC_DAY_6;
+extern Solution* AOC_DAY_7;
+extern Solution* AOC_DAY_8;
+extern Solution* AOC_DAY_9;
+extern Solution* AOC_DAY_10;
+extern Solution* AOC_DAY_11;
+extern Solution* AOC_DAY_12;
+extern Solution* AOC_DAY_13;
+extern Solution* AOC_DAY_14;
+extern Solution* AOC_DAY_15;
+extern Solution* AOC_DAY_16;
+extern Solution* AOC_DAY_17;
+extern Solution* AOC_DAY_18;
+extern Solution* AOC_DAY_19;
+extern Solution* AOC_DAY_20;
+extern Solution* AOC_DAY_21;
+extern Solution* AOC_DAY_22;
+extern Solution* AOC_DAY_23;
+extern Solution* AOC_DAY_24;
+extern Solution* AOC_DAY_25;
 
 inline void setup_solution_list()
 {
@@ -61,7 +60,7 @@ inline void setup_solution_list()
 
 /* Remove solution from the bottom as you finish */
 // SOLUTION(1, {0});
-SOLUTION(2, {0});
+//SOLUTION(2, {0});
 SOLUTION(3, {0});
 SOLUTION(4, {0});
 SOLUTION(5, {0});

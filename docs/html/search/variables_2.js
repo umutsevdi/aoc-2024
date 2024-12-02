@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cmd_0',['cmd',['../structaoc__solution__t.html#ac5860d0b7191a9c7d0cfc98fdeb0bc65',1,'aoc_solution_t']]]
+  ['cmd_0',['cmd',['../structSolution.html#a1796bbd0e932fd4412c9741d63dee453',1,'Solution']]]
 ];

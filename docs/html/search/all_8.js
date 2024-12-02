@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.c']]],
-  ['main_2ec_1',['main.c',['../main_8c.html',1,'']]]
+  ['info_0',['INFO',['../util_8h.html#a91a8f5dd90b4e2ab426f8509d40c3ee0',1,'util.h']]],
+  ['is_5forder_5ffixable_1',['is_order_fixable',['../2_2solution_8c.html#aef3e9d1635a46cd699af83f242b29f24',1,'solution.c']]],
+  ['is_5fordered_2',['is_ordered',['../2_2solution_8c.html#a57140d1ed70ceac77bb1c533c723aa6f',1,'solution.c']]]
 ];
