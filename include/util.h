@@ -57,3 +57,6 @@ void swapl(long* a, long* b);
  * @param n number of elements
  */
 void sortl(long* arr, int n);
+
+/** Parses an int return false on failure */
+bool parse_int(char* string, long* value);
