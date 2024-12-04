@@ -19,6 +19,7 @@ var util_8h =
       [ "AOC_ERR_END", "util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5a24fdaccbcd2f7086ab1dfc3b742c0cdc", null ]
     ] ],
     [ "__now", "util_8h.html#a1e01b48ac10830f8b9a9f7f3c92b4e00", null ],
+    [ "parse_int", "util_8h.html#afb4805cb791d90ac7765e3bc0edfb4a9", null ],
     [ "sortl", "util_8h.html#a14bd4f5ee95b2004b49a706d6db4cea2", null ],
     [ "swapl", "util_8h.html#a9ec50cbe0735fc65f2eff87afe8582a6", null ]
 ];

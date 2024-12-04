@@ -17,8 +17,6 @@ var default_8c =
     [ "SOLUTION", "default_8c.html#a486a8313462c2226959e684207145913", null ],
     [ "SOLUTION", "default_8c.html#af091d5f5ee0987860a0555fe223de737", null ],
     [ "SOLUTION", "default_8c.html#a66831671dce7b5ddae48887f74245f09", null ],
-    [ "SOLUTION", "default_8c.html#ae895ea46097a33e63e7e40a554790955", null ],
-    [ "SOLUTION", "default_8c.html#acee255ce6c674040b8a1edc69ca0c4a1", null ],
     [ "SOLUTION", "default_8c.html#a12e121b0ece34c1695beef55aa6a3a75", null ],
     [ "SOLUTION", "default_8c.html#ad589db971007fb18aa07bf5dbb709de1", null ],
     [ "SOLUTION", "default_8c.html#ad164b8be549ff08e5fe525607c8d19e3", null ],

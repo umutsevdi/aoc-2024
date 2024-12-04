@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['len_0',['len',['../structCliInput.html#ad1a6f57f0a8523128b7305af734d51ce',1,'CliInput']]]
+  ['help_0',['help',['../main_8c.html#a97ee70a8770dc30d06c744b24eb2fcfc',1,'main.c']]]
 ];

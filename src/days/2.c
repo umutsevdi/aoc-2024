@@ -1,7 +1,6 @@
 
 #include "aoc.h"
 #include "util.h"
-#include <errno.h>
 
 /**
  * Receives a line and parses them into series of long numbers.
@@ -24,9 +23,9 @@ static enum aoc_code_t parse_numbers(char* line, long* tokens,
             if (*token_len >= token_max_size) {
                 return ERROR(AOC_OUT_OF_BOUNDS);
             }
-            char* endptr = NULL;
-            tokens[*token_len] = strtol(token, &endptr, 10);
-            if (errno == ERANGE) { return ERROR(AOC_SOLUTION_ID_PARSE); }
+            if (!parse_int(token, &tokens[*token_len])) {
+                return ERROR(AOC_SOLUTION_ID_PARSE);
+            }
             (*token_len)++;
         }
         token = strtok_r(NULL, "\r\n \t", &saveptr);
@@ -102,51 +101,95 @@ static enum aoc_code_t run(CliInput* argv)
     return result;
 }
 
-SOLUTION(
-    2,
-    {.cmd = "--red-nosed-reports",
-     .description =
-         "Fortunately, the first location The Historians want to search\r\n"
-         "isn't a long walk from the Chief Historian's office.\r\n"
-         "\r\n"
-         "While the Red-Nosed Reindeer nuclear fusion/fission plant appears\r\n"
-         "to contain no sign of the Chief Historian, the engineers there "
-         "run\r\n"
-         "up to you as soon as they see you. Apparently, they still talk\r\n"
-         "about the time Rudolph was saved through molecular synthesis from\r\n"
-         "a single electron.\r\n"
-         "\r\n"
-         "They're quick to add that - since you're already here - they'd "
-         "really\r\n"
-         "appreciate your help analyzing some unusual data from the "
-         "Red-Nosed\r\n"
-         "reactor. You turn to check if The Historians are waiting for you,\r\n"
-         "but they seem to have already divided into groups that are\r\n"
-         "currently searching every corner of the facility. You offer to\r\n"
-         "help with the unusual data.\r\n"
-         "\r\n"
-         "The engineers are trying to figure out which reports are safe.\r\n"
-         "The Red-Nosed reactor safety systems can only tolerate levels \r\n"
-         "that are either gradually increasing or gradually decreasing. \r\n"
-         "So, a report only counts as safe if both of the following are "
-         "true:\r\n"
-         "\r\n"
-         "- The levels are either all increasing or all decreasing.\r\n"
-         "- Any two adjacent levels differ by at least one and at most "
-         "three.\r\n"
-         "\r\n"
-         "Part Two \r\n"
-         "The engineers are surprised by the low number of safe reports\r\n"
-         "until they realize they forgot to tell you about the Problem "
-         "Dampener.\r\n"
-         "\r\n"
-         "The Problem Dampener is a reactor-mounted module that lets the\r\n"
-         "reactor safety systems tolerate a single bad level in what would\r\n"
-         "otherwise be a safe report. It's like the bad level never "
-         "happened!\r\n"
-         "\r\n"
-         "Now, the same rules apply as before, except if removing a single\r\n"
-         "level from an unsafe report would make it safe, the report "
-         "instead\r\n"
-         "counts as safe.\r\n",
-     .run = run});
+SOLUTION(2,
+         {.cmd = "--red-nosed-reports",
+          .description =
+              "Fortunately, the first location The Historians want to searc\r\n"
+              "h isn't a long walk from the Chief Historian's office.\r\n"
+              "\r\n"
+              "While the Red-Nosed Reindeer nuclear fusion/fission plant ap\r\n"
+              "pears to contain no sign of the Chief Historian, the enginee\r\n"
+              "rs there run up to you as soon as they see you. Apparently,\r\n"
+              "they still talk about the time Rudolph was saved through mol\r\n"
+              "ecular synthesis from a single electron.\r\n"
+              "\r\n"
+              "They're quick to add that - since you're already here - they\r\n"
+              "'d really appreciate your help analyzing some unusual data f\r\n"
+              "rom the Red-Nosed reactor. You turn to check if The Historia\r\n"
+              "ns are waiting for you, but they seem to have already divide\r\n"
+              "d into groups that are currently searching every corner of t\r\n"
+              "he facility. You offer to help with the unusual data.\r\n"
+              "\r\n"
+              "The unusual data (your puzzle input) consists of many report\r\n"
+              "s, one report per line. Each report is a list of numbers cal\r\n"
+              "led levels that are separated by spaces. For example:\r\n"
+              "\r\n"
+              "7 6 4 2 1\r\n"
+              "1 2 7 8 9\r\n"
+              "9 7 6 2 1\r\n"
+              "1 3 2 4 5\r\n"
+              "8 6 4 4 1\r\n"
+              "1 3 6 7 9\r\n"
+              "\r\n"
+              "This example data contains six reports each containing five\r\n"
+              "levels.\r\n"
+              "\r\n"
+              "The engineers are trying to figure out which reports are saf\r\n"
+              "e. The Red-Nosed reactor safety systems can only tolerate le\r\n"
+              "vels that are either gradually increasing or gradually decre\r\n"
+              "asing. So, a report only counts as safe if both of the follo\r\n"
+              "wing are true:\r\n"
+              "\r\n"
+              "    The levels are either all increasing or all decreasing.\r\n"
+              "    Any two adjacent levels differ by at least one and at mo\r\n"
+              "st three.\r\n"
+              "\r\n"
+              "In the example above, the reports can be found safe or unsaf\r\n"
+              "e by checking those rules:\r\n"
+              "\r\n"
+              "    7 6 4 2 1: Safe because the levels are all decreasing by\r\n"
+              " 1 or 2.\r\n"
+              "    1 2 7 8 9: Unsafe because 2 7 is an increase of 5.\r\n"
+              "    9 7 6 2 1: Unsafe because 6 2 is a decrease of 4.\r\n"
+              "    1 3 2 4 5: Unsafe because 1 3 is increasing but 3 2 is d\r\n"
+              "ecreasing.\r\n"
+              "    8 6 4 4 1: Unsafe because 4 4 is neither an increase or\r\n"
+              "a decrease.\r\n"
+              "    1 3 6 7 9: Safe because the levels are all increasing by\r\n"
+              " 1, 2, or 3.\r\n"
+              "\r\n"
+              "So, in this example, 2 reports are safe.\r\n"
+              "\r\n"
+              "Analyze the unusual data from the engineers. How many report\r\n"
+              "s are safe?\r\n"
+              "\r\n"
+              "--- Part Two ---\r\n"
+              "\r\n"
+              "The engineers are surprised by the low number of safe report\r\n"
+              "s until they realize they forgot to tell you about the Probl\r\n"
+              "em Dampener.\r\n"
+              "\r\n"
+              "The Problem Dampener is a reactor-mounted module that lets t\r\n"
+              "he reactor safety systems tolerate a single bad level in wha\r\n"
+              "t would otherwise be a safe report. It's like the bad level\r\n"
+              "never happened!\r\n"
+              "\r\n"
+              "Now, the same rules apply as before, except if removing a si\r\n"
+              "ngle level from an unsafe report would make it safe, the rep\r\n"
+              "ort instead counts as safe.\r\n"
+              "\r\n"
+              "More of the above example's reports are now safe:\r\n"
+              "\r\n"
+              "    7 6 4 2 1: Safe without removing any level.\r\n"
+              "    1 2 7 8 9: Unsafe regardless of which level is removed.\r\n"
+              "    9 7 6 2 1: Unsafe regardless of which level is removed.\r\n"
+              "    1 3 2 4 5: Safe by removing the second level, 3.\r\n"
+              "    8 6 4 4 1: Safe by removing the third level, 4.\r\n"
+              "    1 3 6 7 9: Safe without removing any level.\r\n"
+              "\r\n"
+              "Thanks to the Problem Dampener, 4 reports are actually safe!\r\n"
+              "\r\n"
+              "Update your analysis by handling situations where the Proble\r\n"
+              "m Dampener can remove a single level from unsafe reports. Ho\r\n"
+              "w many reports are now safe?\r\n",
+          .run = run});

@@ -1,5 +1,6 @@
 #include "util.h"
 #include <time.h>
+#include <errno.h>
 
 static struct tm* _tm;
 
@@ -36,4 +37,13 @@ inline void sortl(long* arr, int n)
         }
         if (swapped == false) break;
     }
+}
+
+bool parse_int(char* string, long* value)
+{
+    char* endptr = string;
+    long number = strtoll(string, &endptr, 10);
+    if (errno == ERANGE || *endptr != '\0') { return false; }
+    *value = number;
+    return true;
 }

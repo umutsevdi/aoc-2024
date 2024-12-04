@@ -73,13 +73,13 @@ int main(int argc, char* argv[])
                "                └────────────────────────┘ \r\n",
                id);
         printf("%s", solutions[id - 1]->description);
-    } else if (cmparg("--", argv[2])) {
+    } else if (cmparg("--", argv[1])) {
         /* Run command by name */
         bool found = false;
         for (int i = 0; i < SOLUTION_SIZE; i++) {
-            if (cmparg(solutions[i]->cmd, argv[2])) {
+            if (cmparg(solutions[i]->cmd, argv[1])) {
                 found = true;
-                enum aoc_code_t input_result = read_input(argv[3], &input);
+                enum aoc_code_t input_result = read_input(argv[2], &input);
                 if (!input_result) { return solutions[i]->run(&input); }
                 return input_result;
             }

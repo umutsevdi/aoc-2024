@@ -60,9 +60,9 @@ inline void setup_solution_list()
 
 /* Remove solution from the bottom as you finish */
 // SOLUTION(1, {0});
-//SOLUTION(2, {0});
-SOLUTION(3, {0});
-SOLUTION(4, {0});
+// SOLUTION(2, {0});
+// SOLUTION(3, {0});
+//SOLUTION(4, {0});
 SOLUTION(5, {0});
 SOLUTION(6, {0});
 SOLUTION(7, {0});

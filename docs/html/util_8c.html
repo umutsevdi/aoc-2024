@@ -107,16 +107,19 @@ $(function(){initNavTree('util_8c.html',''); initResizable(true); });
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="util_8h_source.html">util.h</a>&quot;</code><br />
 <code>#include &lt;time.h&gt;</code><br />
+<code>#include &lt;errno.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for util.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="util_8c__incl.png" border="0" usemap="#autil_8c" alt=""/></div>
 <map name="autil_8c" id="autil_8c">
-<area shape="rect" title=" " alt="" coords="253,5,306,33"/>
+<area shape="rect" title=" " alt="" coords="294,5,347,33"/>
 <area shape="rect" href="util_8h.html" title="File: include/util.h Created: 12/01/24 Author: Umut Sevdi Description: Utility library." alt="" coords="211,81,265,109"/>
-<area shape="poly" title=" " alt="" coords="274,35,255,69,251,66,270,32"/>
+<area shape="poly" title=" " alt="" coords="308,36,266,73,262,69,304,32"/>
 <area shape="rect" title=" " alt="" coords="289,81,352,109"/>
-<area shape="poly" title=" " alt="" coords="289,32,308,66,303,69,284,35"/>
+<area shape="poly" title=" " alt="" coords="323,34,323,65,318,65,318,34"/>
+<area shape="rect" title=" " alt="" coords="376,81,444,109"/>
+<area shape="poly" title=" " alt="" coords="338,31,384,69,381,73,335,36"/>
 <area shape="rect" title=" " alt="" coords="5,157,87,184"/>
 <area shape="poly" title=" " alt="" coords="211,109,95,153,94,148,210,104"/>
 <area shape="rect" title=" " alt="" coords="111,157,181,184"/>
@@ -141,6 +144,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a14bd4f5ee95b2004b49a706d6db4cea2" id="r_a14bd4f5ee95b2004b49a706d6db4cea2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14bd4f5ee95b2004b49a706d6db4cea2">sortl</a> (long *arr, int n)</td></tr>
 <tr class="memdesc:a14bd4f5ee95b2004b49a706d6db4cea2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort an array with n items from smallest to biggest.  <br /></td></tr>
 <tr class="separator:a14bd4f5ee95b2004b49a706d6db4cea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb4805cb791d90ac7765e3bc0edfb4a9" id="r_afb4805cb791d90ac7765e3bc0edfb4a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb4805cb791d90ac7765e3bc0edfb4a9">parse_int</a> (char *string, long *value)</td></tr>
+<tr class="memdesc:afb4805cb791d90ac7765e3bc0edfb4a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses an int return false on failure.  <br /></td></tr>
+<tr class="separator:afb4805cb791d90ac7765e3bc0edfb4a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -164,6 +170,29 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Current date time in string. </p>
+
+</div>
+</div>
+<a id="afb4805cb791d90ac7765e3bc0edfb4a9" name="afb4805cb791d90ac7765e3bc0edfb4a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb4805cb791d90ac7765e3bc0edfb4a9">&#9670;&#160;</a></span>parse_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool parse_int </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>string</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long *</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Parses an int return false on failure. </p>
 
 </div>
 </div>

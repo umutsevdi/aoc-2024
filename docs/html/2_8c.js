@@ -5,5 +5,5 @@ var 2_8c =
     [ "parse_numbers", "2_8c.html#a897e16e54923cb9351a50c36fc7e4ceb", null ],
     [ "run", "2_8c.html#a496ba9ac1eb70627e5da3a62ae697b3e", null ],
     [ "run_parts", "2_8c.html#acd215318ebe1a7e3a9142a8a342526e8", null ],
-    [ "SOLUTION", "2_8c.html#a6ae5c24bbde6df9e8c7f3497e9a0217f", null ]
+    [ "SOLUTION", "2_8c.html#a11bd7c61429442cb9c53605233e5c122", null ]
 ];
