@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "Advent of Code 2024", "index.html", [
-    [ "aoc-2024", "md_README.html", null ],
+    [ "README", "md_README.html", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],

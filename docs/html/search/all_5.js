@@ -1,7 +1,7 @@
 var searchData=
 [
   ['adc_5funknown_5foption_0',['ADC_UNKNOWN_OPTION',['../util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5a16f155c72f099092ecb9b2e26fecbc0b',1,'util.h']]],
-  ['aoc_202024_1',['aoc-2024',['../md_README.html',1,'']]],
+  ['aoc_20cli_1',['aoc CLI',['../md_README.html#autotoc_md0',1,'']]],
   ['aoc_2eh_2',['aoc.h',['../aoc_8h.html',1,'']]],
   ['aoc_5fcode_5ft_3',['aoc_code_t',['../util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5',1,'util.h']]],
   ['aoc_5fday_5f1_4',['AOC_DAY_1',['../default_8c.html#a7ea1d6b7b6f5fd8feed9abcfcc10dc30',1,'default.c']]],

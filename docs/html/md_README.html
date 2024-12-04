@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Advent of Code 2024: aoc-2024</title>
+<title>Advent of Code 2024: README</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -99,12 +99,50 @@ $(function(){initNavTree('md_README.html',''); initResizable(true); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">aoc-2024</div></div>
+  <div class="headertitle"><div class="title">README</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a></p>
-<p>A repository that contains Advent of Code 2024 Solutions in C programming language </p>
-</div></div><!-- contents -->
+<div class="textblock"><p align="center"></p>
+<p align="center"><a href="https://github.com/umutsevdi/aoc-2024">Advent of Code 2024 </a> </p>
+<p align="center">A repository that contains Advent of Code 2024 Solutions in C programming language. <br  />
+ <em>Developed by <a href="https://github.com/umutsevdi">Umut Sevdi</a></em> </p>
+<p><a href="https://umutsevdi.github.io/aoc-2024/md_README.html"><b> Explore the docs » </b></a></p>
+<h2><a class="anchor" id="autotoc_md0"></a>
+aoc CLI</h2>
+<p>aoc CLI can display questions, execute solutions on given inputs. aoc CLI can query questions either by their code name or their day. </p><div class="fragment"><div class="line">         ╒══════════════════════════════════════════╕</div>
+<div class="line">                      Usage: aoc [OPTIONS]</div>
+<div class="line">          Advent of Code 2024 Command Line Interface</div>
+<div class="line">         ╘══════════════════════════════════════════╛</div>
+<div class="line"> </div>
+<div class="line">Options:</div>
+<div class="line">  ┌─────────────────────────────────────────────────────────────┐</div>
+<div class="line">  │  -h/--help                 │   Shows this message           │</div>
+<div class="line">  │  -r/--read [day]           │   Prints the question of the   │</div>
+<div class="line">  │                            │day for the specified day       │</div>
+<div class="line">  │  -q/--question [day] [file]│   Solves the question of the   │</div>
+<div class="line">  │                            │day for the specified day       │</div>
+<div class="line">  │  --[question-name] [file]  │   Solves the question by its   │</div>
+<div class="line">  │                            │name (e.g. --turing-machine)    │</div>
+<div class="line">  └─────────────────────────────────────────────────────────────┘</div>
+<div class="line">Supports pipe operations.</div>
+<div class="line"> </div>
+<div class="line">Examples:</div>
+<div class="line">  aoc  -r 1                      │ Displays the question of Day 1</div>
+<div class="line">  aoc  -q 2 file.txt             │ Solves the question for Day 2 with file.txt as input</div>
+<div class="line">  aoc  -q 5 &lt;&lt;&lt; &quot;1 2 3 4 5 6&quot;    │ Solves the question for Day 5 using given input</div>
+<div class="line">  aoc  --turing-machine file.txt │ Solves the question with the name &quot;turing-machine&quot;</div>
+<div class="line"> </div>
+<div class="line">Available Questions are:</div>
+<div class="line">--historian-hysteria, --red-nosed-reports, --mull-it-over,</div>
+<div class="line">--ceres-search,</div>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md1"></a>
+Installation</h2>
+<div class="fragment"><div class="line">sudo apt install doxygen # dependency for docs</div>
+<div class="line">mkdir build</div>
+<div class="line">cd build/</div>
+<div class="line">cmake ..</div>
+<div class="line">make</div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
