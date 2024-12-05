@@ -113,10 +113,9 @@ static enum aoc_code_t run(CliInput* argv)
     size_t cols = strnlen(lines[0], indices[1] - indices[0]);
     INFO("Part 1: %zu", , run_part1(lines, indices_len, cols));
     INFO("Part 2: %zu", , run_part2(lines, indices_len, cols));
-    return AOC_OK;
     free(lines);
     free(data);
-    return 0;
+    return AOC_OK;
 }
 
 SOLUTION(

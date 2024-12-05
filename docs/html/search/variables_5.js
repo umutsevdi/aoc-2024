@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['run_0',['run',['../structSolution.html#a3ea628971e231370eec33cb84e88c90a',1,'Solution']]]
+  ['n1_0',['n1',['../structRule.html#a22d6ae489f3dbcc4066a0f9a35ca5e83',1,'Rule']]],
+  ['n2_1',['n2',['../structRule.html#aa057ab8cc9448f1ff784f19e1cc868ea',1,'Rule']]]
 ];

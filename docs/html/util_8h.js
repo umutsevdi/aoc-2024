@@ -16,6 +16,7 @@ var util_8h =
       [ "AOC_NOT_A_FILE", "util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5ad46a41c338aef0e3c3c028627954be03", null ],
       [ "AOC_PIPE_FAILED", "util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5a561c10c0cfbb9de31b32aaef73f47cb8", null ],
       [ "AOC_NO_INPUT", "util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5a252eefa0c7a351909f15749509c199f7", null ],
+      [ "AOC_PARSE", "util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5a9ff6d8ea37ce5c8fe119ce302a2ccefc", null ],
       [ "AOC_ERR_END", "util_8h.html#a88b53f82662054ffc8f123a7ffee7ed5a24fdaccbcd2f7086ab1dfc3b742c0cdc", null ]
     ] ],
     [ "__now", "util_8h.html#a1e01b48ac10830f8b9a9f7f3c92b4e00", null ],

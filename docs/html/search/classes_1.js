@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['solution_0',['Solution',['../structSolution.html',1,'']]]
+  ['rule_0',['Rule',['../structRule.html',1,'']]]
 ];

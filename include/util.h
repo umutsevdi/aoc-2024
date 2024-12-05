@@ -30,6 +30,7 @@ enum aoc_code_t {
     /** Expected a file, found a directory.*/ AOC_NOT_A_FILE,
     /** Error during allocation.*/ AOC_PIPE_FAILED,
     /** No input provided*/ AOC_NO_INPUT,
+    /** Invalid data format*/ AOC_PARSE,
     /** Error size, invalid error type*/ AOC_ERR_END,
 };
 
